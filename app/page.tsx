@@ -79,7 +79,7 @@ export default function Dashboard() {
               </motion.p>
             </div>
             <motion.div
-              className="-z-10 mt-5 flex gap-4"
+              className="-z-10 mt-5 flex w-full gap-4"
               transition={{ ease: "easeIn", duration: 2 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function Dashboard() {
               <Link
                 href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
                 target="_blank"
-                className="cv cv-text relative flex w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3 py-3 transition-colors duration-300"
+                className="cv cv-text relative flex min-w-32 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-2 transition-colors duration-300 max-sm:w-full max-sm:text-xs "
                 onMouseEnter={() => setCvHover(true)}
                 onMouseLeave={() => setCvHover(false)}
               >
@@ -109,7 +109,7 @@ export default function Dashboard() {
                 </div>
               </Link>
               <div
-                className={`relative flex w-56 cursor-pointer items-center justify-center gap-2 rounded-full px-3 py-3 transition-colors duration-500 ${
+                className={`relative flex w-full cursor-pointer items-center justify-center gap-2 rounded-full p-3 transition-colors duration-500 max-sm:text-xs md:w-56 ${
                   copied ? "email-click" : hover ? "email" : "email"
                 }`}
                 onMouseEnter={() => setHover(true)}

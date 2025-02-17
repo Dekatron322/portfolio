@@ -9,13 +9,14 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Caregivers Hospital - A Beacon of Quality Healthcare!",
-  description: "We are a family with a major focus in both primary and secondary healthcare service.",
+  title: "Ibrahim Muritala",
+  description:
+    "Ibrahim Muritala is a multidisciplinary software engineer (frontend heavy) with 5+ years of experience and a degree in physics.",
   twitter: {
     card: "summary_large_image",
   },
   openGraph: {
-    url: "https://app.caregiverhospital.com/",
+    url: "https://ibmuri.vercel.app/",
     images: [
       {
         width: 1200,

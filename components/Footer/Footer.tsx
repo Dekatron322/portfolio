@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="footer_bg flex h-16 w-full items-center justify-between whitespace-nowrap rounded-full px-2 font-semibold  md:max-w-[800px]">
         <div className="flex items-center gap-2">
           <Image className="rounded-full" src="/avatar.svg" width={50} height={50} alt="avatar" />
-          <h5 className="footer_text text-2xl">IBMuri</h5>
+          <h5 className="footer_text text-2xl max-sm:hidden">IBMuri</h5>
         </div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
