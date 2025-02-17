@@ -1,12 +1,11 @@
 "use client"
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
-import { FiUser } from "react-icons/fi"
+import { FiCheckCircle, FiUser } from "react-icons/fi"
 import { LuLayoutDashboard } from "react-icons/lu"
 import { CgLaptop } from "react-icons/cg"
 import { HiOutlineMail } from "react-icons/hi"
 import { GoCopy } from "react-icons/go"
-import { LuCheckCircle } from "react-icons/lu"
 
 import { motion } from "framer-motion"
 
@@ -55,7 +54,7 @@ const Footer = () => {
             {copied ? (
               <>
                 <p className="text-white">Email Copied!</p>
-                <LuCheckCircle className="ml-2 text-lg font-semibold text-white" />
+                <FiCheckCircle className="ml-2 text-lg font-semibold text-white" />
               </>
             ) : (
               <>

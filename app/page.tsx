@@ -6,12 +6,13 @@ import { HiOutlineMail } from "react-icons/hi"
 import { GoCopy } from "react-icons/go"
 import { CgFileDocument } from "react-icons/cg"
 import { BsDownload } from "react-icons/bs"
-import { LuCheckCircle, LuPhoneCall } from "react-icons/lu"
+import { LuPhoneCall } from "react-icons/lu"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
 import SocialsMedia from "components/Socials/SocialsMedia"
 import ProjectCard from "components/ProjectCards/ProjectCards"
+import { FiCheckCircle } from "react-icons/fi"
 
 export default function Dashboard() {
   const [hover, setHover] = useState(false)
@@ -118,7 +119,7 @@ export default function Dashboard() {
                 {copied ? (
                   <>
                     <p className="font-semibold text-white">Email Copied!</p>
-                    <LuCheckCircle className="ml-2 text-lg font-semibold text-white" />
+                    <FiCheckCircle className="ml-2 text-lg font-semibold text-white" />
                   </>
                 ) : (
                   <>
@@ -204,7 +205,7 @@ export default function Dashboard() {
                     {copied ? (
                       <>
                         <p className="font-semibold text-white">Email Copied!</p>
-                        <LuCheckCircle className="ml-2 text-lg font-semibold text-white" />
+                        <FiCheckCircle className="ml-2 text-lg font-semibold text-white" />
                       </>
                     ) : (
                       <>
@@ -239,7 +240,7 @@ export default function Dashboard() {
                     {callCopied ? (
                       <>
                         <p className="font-semibold text-white">Phone no Copied!</p>
-                        <LuCheckCircle className="ml-2 text-lg font-semibold text-white" />
+                        <FiCheckCircle className="ml-2 text-lg font-semibold text-white" />
                       </>
                     ) : (
                       <>
