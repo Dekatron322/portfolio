@@ -3,8 +3,7 @@ import { useTheme } from "next-themes"
 import React, { useEffect, useState } from "react"
 import WbSunnyIcon from "@mui/icons-material/WbSunny"
 import { GoMoon } from "react-icons/go"
-import AOS from "aos"
-import "aos/dist/aos.css"
+
 import { MdArrowBack } from "react-icons/md"
 import { useRouter } from "next/navigation"
 
@@ -12,13 +11,6 @@ const ProjectsNav = () => {
   const { theme, setTheme } = useTheme()
   const [isMoonIcon, setIsMoonIcon] = useState(true)
   const router = useRouter()
-
-  useEffect(() => {
-    AOS.init({
-      duration: 500,
-      once: true,
-    })
-  }, [])
 
   const toggleIcon = () => {
     setIsMoonIcon(!isMoonIcon)
@@ -30,12 +22,7 @@ const ProjectsNav = () => {
   }
 
   return (
-    <nav
-      className="z-150 fixed left-0 right-0 top-0 flex justify-center py-7"
-      data-aos="fade-down"
-      data-aos-duration="1000"
-      data-aos-delay="500"
-    >
+    <nav className="z-150 fixed left-0 right-0 top-0 flex justify-center py-7">
       <div className="flex w-full max-w-[800px] justify-between">
         <div
           className="containerbg flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-full px-5 py-3 text-center font-semibold"
