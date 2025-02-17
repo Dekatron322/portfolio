@@ -159,7 +159,7 @@ export default function Dashboard() {
                 variants={containerVariants}
               >
                 <motion.h5 className="text-4xl font-bold" variants={itemVariants}>
-                  Let's work together
+                  Let&apos;s work together
                 </motion.h5>
                 <motion.p className="clash my-4" variants={itemVariants}>
                   I would love to hear from you, so feel free to reach out
@@ -171,7 +171,7 @@ export default function Dashboard() {
                   <Link
                     href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
                     target="_blank"
-                    className="cv cv-text relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3  py-3 transition-colors duration-300"
+                    className="cv cv-text relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-3   transition-colors duration-300"
                     onMouseEnter={() => setCvHover(true)}
                     onMouseLeave={() => setCvHover(false)}
                   >
