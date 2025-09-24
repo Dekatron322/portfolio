@@ -7,7 +7,7 @@ const gilroy = localFont({
   src: [
     { path: "../styles/fonts/DMSans-Regular.ttf", weight: "400", style: "normal" },
     { path: "../styles/fonts/DMSans-Medium.ttf", weight: "500", style: "normal" },
-    { path: "../styles/fonts/DMSans-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../styles/fonts/AltTomato.ttf", weight: "700", style: "normal" },
   ],
   variable: "--font-gilroy",
   display: "swap",
@@ -97,4 +97,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
-
