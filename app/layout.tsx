@@ -1,11 +1,17 @@
 import "styles/tailwind.css"
 import { Metadata } from "next"
 import ThemeProviders from "components/ProvidersComponents/ThemeProviders"
-import { Inter } from "next/font/google"
+import localFont from "next/font/local"
 
-const inter = Inter({
-  subsets: ["latin"],
+const gilroy = localFont({
+  src: [
+    { path: "../styles/fonts/DMSans-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../styles/fonts/DMSans-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../styles/fonts/DMSans-Bold.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-gilroy",
   display: "swap",
+  preload: true,
 })
 
 export const metadata: Metadata = {
@@ -79,7 +85,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={gilroy.variable}>
       <head>
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
@@ -91,3 +97,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+
