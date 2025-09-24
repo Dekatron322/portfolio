@@ -84,7 +84,7 @@ const Teams = () => {
       {/* Header Section */}
       <motion.div variants={itemVariants} className="mb-12 text-center">
         <h3 className="text-3xl font-bold">Teams</h3>
-        <p className="clash mt-2">Some of the exceptional teams I've worked with</p>
+        <p className="clash mt-2">Some of the exceptional teams I&apos;ve worked with</p>
       </motion.div>
 
       {/* Infinite Scroll Container */}
