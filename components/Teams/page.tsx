@@ -11,8 +11,8 @@ const Teams = () => {
     { name: "Bluremit", logo: "/teams/bluremit.svg" },
     { name: "Saffron", logo: "/teams/saffron.svg" },
     { name: "Otech", logo: "/teams/otech.svg" },
-    { name: "Chats", logo: "/teams/chats.png" },
     { name: "Craft", logo: "/teams/craft.png" },
+    { name: "Chats", logo: "/teams/chats.png" },
   ]
 
   const containerVariants = {
