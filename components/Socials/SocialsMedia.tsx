@@ -4,12 +4,27 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 import { AiFillInstagram } from "react-icons/ai"
 import { FaDiscord } from "react-icons/fa"
-import { GoArrowUpRight } from "react-icons/go"
 import { FaTelegram } from "react-icons/fa"
 import { FaTiktok } from "react-icons/fa"
 import { FaGitlab } from "react-icons/fa"
 import Link from "next/link"
 import { motion } from "framer-motion"
+
+const CustomArrow = () => (
+  <svg
+    width="1em"
+    height="1em"
+    viewBox="0 0 17 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="new-arrow-right -rotate-45 text-[#f4b601]"
+  >
+    <path
+      d="M9.1497 0.80204C9.26529 3.95101 13.2299 6.51557 16.1451 8.0308L16.1447 9.43036C13.2285 10.7142 9.37889 13.1647 9.37789 16.1971L7.27855 16.1978C7.16304 12.8156 10.6627 10.4818 13.1122 9.66462L0.049716 9.43565L0.0504065 7.33631L13.1129 7.56528C10.5473 6.86634 6.93261 4.18504 7.05036 0.80273L9.1497 0.80204Z"
+      fill="#f4b601"
+    ></path>
+  </svg>
+)
 
 const SocialsMedia = () => {
   const [gitHover, setGitHover] = useState(false)
@@ -26,16 +41,16 @@ const SocialsMedia = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Delay between children
+        staggerChildren: 0.2,
       },
     },
   }
 
-  // Child item animation variants
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   }
+
   return (
     <motion.div
       initial="hidden"
@@ -65,7 +80,7 @@ const SocialsMedia = () => {
             }`}
           >
             <p className="font-semibold text-[#f4b601]">LinkedIn</p>
-            <GoArrowUpRight className="text-[#f4b601]" />
+            <CustomArrow />
           </div>
         </Link>
 
@@ -90,7 +105,7 @@ const SocialsMedia = () => {
             }`}
           >
             <p className="font-semibold text-[#f4b601]">GitHub</p>
-            <GoArrowUpRight className="text-[#f4b601]" />
+            <CustomArrow />
           </div>
         </Link>
         <Link
@@ -114,7 +129,7 @@ const SocialsMedia = () => {
             }`}
           >
             <p className="font-semibold text-[#f4b601]">Twitter</p>
-            <GoArrowUpRight className="text-[#f4b601]" />
+            <CustomArrow />
           </div>
         </Link>
         <Link
@@ -138,12 +153,12 @@ const SocialsMedia = () => {
             }`}
           >
             <p className="font-semibold text-[#f4b601]">Discord</p>
-            <GoArrowUpRight className="text-[#f4b601]" />
+            <CustomArrow />
           </div>
         </Link>
       </motion.div>
       <motion.div
-        className="flex justify-center gap-10 max-sm:mt-10 max-sm:grid max-sm:grid-cols-2 md:mt-20"
+        className="flex justify-center gap-10 max-sm:mt-10 max-sm:grid max-sm:grid-cols-2 md:mt-10"
         variants={itemVariants}
       >
         <Link
@@ -167,7 +182,7 @@ const SocialsMedia = () => {
             }`}
           >
             <p className="font-semibold text-[#f4b601]">Instagram</p>
-            <GoArrowUpRight className="text-[#f4b601]" />
+            <CustomArrow />
           </div>
         </Link>
 
@@ -192,7 +207,7 @@ const SocialsMedia = () => {
             }`}
           >
             <p className="font-semibold text-[#f4b601]">GitLab</p>
-            <GoArrowUpRight className="text-[#f4b601]" />
+            <CustomArrow />
           </div>
         </Link>
         <Link
@@ -216,7 +231,7 @@ const SocialsMedia = () => {
             }`}
           >
             <p className="font-semibold text-[#f4b601]">Telegram</p>
-            <GoArrowUpRight className="text-[#f4b601]" />
+            <CustomArrow />
           </div>
         </Link>
         <Link
@@ -240,7 +255,7 @@ const SocialsMedia = () => {
             }`}
           >
             <p className="font-semibold text-[#f4b601]">TikTok</p>
-            <GoArrowUpRight className="text-[#f4b601]" />
+            <CustomArrow />
           </div>
         </Link>
       </motion.div>

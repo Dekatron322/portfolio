@@ -2,7 +2,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { GoArrowRight } from "react-icons/go"
 import { useRouter } from "next/navigation"
-import { projects } from "utils" // Assuming you have a utils file where the projects array is defined.
+import { projects } from "utils"
 import { motion } from "framer-motion"
 
 export default function ProjectCard() {
@@ -15,12 +15,11 @@ export default function ProjectCard() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Delay between children
+        staggerChildren: 0.2,
       },
     },
   }
 
-  // Child item animation variants
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -29,11 +28,17 @@ export default function ProjectCard() {
   return (
     <>
       {projects.map((project, index) => (
-        <div
+        <motion.div
           className="card-bg relative h-[450px] overflow-hidden rounded-xl border border-[#FFFFFF1A]"
           onMouseEnter={() => setHoverIndex(index)}
           onMouseLeave={() => setHoverIndex(-1)}
           key={index}
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.3 }}
         >
           <div className={`transition-transform duration-500 ${hoverIndex === index ? "-translate-y-full" : ""}`}>
             <Image
@@ -69,22 +74,32 @@ export default function ProjectCard() {
               hoverIndex === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            <button
-              className="study_case relative flex w-full items-center justify-between overflow-hidden rounded-full p-2 "
+            <motion.button
+              className="study_case group relative flex w-full items-center justify-between overflow-hidden rounded-full px-3 py-2 text-sm"
               onClick={() => router.push(`/projects/${project.id}`)}
-              onMouseEnter={() => setJustHoverIndex(index)}
-              onMouseLeave={() => setJustHoverIndex(-1)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <p className="relative z-10">View Project Detail</p>
-              <GoArrowRight className="relative z-10" />
-              <span
-                className={`absolute inset-0 transform bg-gradient-to-r from-[#f4b601] to-[#f4b601] ${
-                  justHoverIndex === index ? "translate-x-0" : "-translate-x-full"
-                } transition-transform duration-500`}
-              />
-            </button>
+              <span className="relative z-20 transition-colors duration-300 group-hover:text-black">
+                View Project Detail
+              </span>
+              <svg
+                width="1em"
+                height="1em"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="relative z-20 transition-colors duration-300 group-hover:text-black"
+              >
+                <path
+                  d="M9.1497 0.80204C9.26529 3.95101 13.2299 6.51557 16.1451 8.0308L16.1447 9.43036C13.2285 10.7142 9.37889 13.1647 9.37789 16.1971L7.27855 16.1978C7.16304 12.8156 10.6627 10.4818 13.1122 9.66462L0.049716 9.43565L0.0504065 7.33631L13.1129 7.56528C10.5473 6.86634 6.93261 4.18504 7.05036 0.80273L9.1497 0.80204Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span className="absolute inset-0 -translate-x-full transform bg-gradient-to-r from-[#f4b601] to-[#f4b601] transition-transform duration-500 group-hover:translate-x-0" />
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       ))}
     </>
   )

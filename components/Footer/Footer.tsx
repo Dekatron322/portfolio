@@ -8,6 +8,7 @@ import { HiOutlineMail } from "react-icons/hi"
 import { GoCopy } from "react-icons/go"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 const Footer = () => {
   const [hover, setHover] = useState(false)
@@ -31,10 +32,10 @@ const Footer = () => {
           <h5 className="footer_text text-2xl max-sm:hidden">IBMuri</h5>
         </div>
         <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2">
+          <Link href="/about" className="flex items-center gap-2">
             <FiUser className="footer_text text-lg font-semibold" />
             <p className="footer_text max-sm:hidden">About</p>
-          </div>
+          </Link>
           <div className="flex items-center gap-2">
             <LuLayoutDashboard className="footer_text text-lg font-semibold" />
             <p className="footer_text max-sm:hidden">Projects</p>

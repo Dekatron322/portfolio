@@ -17,6 +17,7 @@ import { FiCheckCircle } from "react-icons/fi"
 export default function Dashboard() {
   const [hover, setHover] = useState(false)
   const [hoverCall, setHoverCall] = useState(false)
+
   const [cvHover, setCvHover] = useState(false)
   const [hoverCard, setHoverCard] = useState(false)
   const [copied, setCopied] = useState(false)
@@ -25,50 +26,29 @@ export default function Dashboard() {
   const handleCopy = () => {
     navigator.clipboard.writeText("cygnux696@gmail.com")
     setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    setTimeout(() => setCopied(false), 2000) // Reset copied state after 2 seconds
   }
 
   const handleCallCopy = () => {
     navigator.clipboard.writeText("08129859405")
     setCallCopied(true)
-    setTimeout(() => setCallCopied(false), 2000)
+    setTimeout(() => setCallCopied(false), 2000) // Reset copied state after 2 seconds
   }
 
-  // Faster container variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1, // Reduced from 0.2
+        staggerChildren: 0.2, // Delay between children
       },
     },
   }
 
-  // Faster child item animation variants
+  // Child item animation variants
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 }, // Reduced y distance
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.3, // Reduced from 0.5
-        ease: "easeOut",
-      },
-    },
-  }
-
-  // Quick fade-in variants for main content
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut",
-      },
-    },
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   }
 
   return (
@@ -77,22 +57,40 @@ export default function Dashboard() {
         <DashboardNav />
         <div className="mt-16 flex flex-grow">
           <div className="w-full gap-6 max-md:flex-col max-md:px-0 md:mb-16">
-            <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
+            <div className="">
               <motion.h2
                 className="mt-14 h-full text-[46px] font-bold max-sm:mt-24 max-sm:text-3xl md:leading-[60px]"
-                variants={fadeInUp}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ease: "easeOut", duration: 2 }}
               >
-                I craft human-centered products and designs that convert{" "}
-                <span className="text-[#f4b601]">effectively</span>.{" "}
+                I'm Ibrahim P. Muritala
               </motion.h2>
-              <motion.p className=" mt-2 text-lg " variants={fadeInUp}>
-                Ibrahim Muritala is a multidisciplinary software engineer with a background in physics and electronics
-                and proficiency in frontend, backend, web3, and interaction design, as well as Framer development
-                (no-code).
+              <motion.p
+                className="clash mt-4 font-normal md:text-lg"
+                transition={{ ease: "easeIn", duration: 2 }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                A multidisciplinary designer with a background in finance. I'm proficient in product, icon,
+                illustration, and interaction design, as well as Framer development (No-code).{" "}
+              </motion.p>{" "}
+              <motion.p className="clash mt-4 font-normal md:text-lg">
+                I love crafting human-centered products that shape the future of purposeful digital products and designs
+                that convert effectively.{" "}
+              </motion.p>{" "}
+              <motion.p className="clash mt-4 font-normal md:text-lg">
+                {" "}
+                I have loved design since I was 11 years old. I can vividly remember how fascinated I would become when
+                looking at business logos and signage every time I stepped out in a moving vehicle.
               </motion.p>
-            </motion.div>
-
-            <motion.div className="-z-10 mt-5 flex w-full gap-4" variants={fadeInUp} initial="hidden" animate="visible">
+            </div>
+            <motion.div
+              className="-z-10 mt-5 flex w-full gap-4"
+              transition={{ ease: "easeIn", duration: 2 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
               <Link
                 href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
                 target="_blank"
@@ -153,23 +151,21 @@ export default function Dashboard() {
                 )}
               </div>
             </motion.div>
-
-            <motion.div
-              className="mt-20 w-full"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
-              variants={containerVariants}
-            >
-              <motion.div variants={itemVariants}>
+            <div className="mt-20 w-full">
+              <div>
                 <h5 className="text-3xl font-bold">Projects</h5>
                 <p className="clash mb-3">Some of my recent work.</p>
-              </motion.div>
-              <div className="-z-10 grid w-full gap-6 max-sm:grid-cols-1 md:grid-cols-2">
+              </div>
+              <div className=" -z-10 grid w-full gap-6 max-sm:grid-cols-1 md:grid-cols-2">
                 <ProjectCard />
               </div>
-
-              <motion.div className="mt-10 flex flex-col items-center" variants={itemVariants}>
+              <motion.div
+                className="mt-10 flex flex-col items-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={containerVariants}
+              >
                 <motion.h5 className="text-4xl font-bold" variants={itemVariants}>
                   Let&apos;s work together
                 </motion.h5>
@@ -183,7 +179,7 @@ export default function Dashboard() {
                   <Link
                     href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
                     target="_blank"
-                    className="cv cv-text relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-3 transition-colors duration-300"
+                    className="cv cv-text relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-3   transition-colors duration-300"
                     onMouseEnter={() => setCvHover(true)}
                     onMouseLeave={() => setCvHover(false)}
                   >
@@ -206,7 +202,7 @@ export default function Dashboard() {
                   </Link>
 
                   <div
-                    className={`relative flex cursor-pointer items-center justify-center gap-2 rounded-full px-2 py-3 transition-colors duration-500 ${
+                    className={` relative flex cursor-pointer items-center justify-center gap-2 rounded-full px-2  py-3 transition-colors duration-500 ${
                       copied ? "email-click" : hover ? "email" : "email"
                     }`}
                     onMouseEnter={() => setHover(true)}
@@ -241,7 +237,7 @@ export default function Dashboard() {
                     )}
                   </div>
                   <div
-                    className={`relative flex cursor-pointer items-center justify-center gap-2 rounded-full p-3 transition-colors duration-500 ${
+                    className={`  relative flex cursor-pointer items-center justify-center gap-2 rounded-full p-3 transition-colors duration-500 ${
                       callCopied ? "email-click" : hoverCall ? "email" : "email"
                     }`}
                     onMouseEnter={() => setHoverCall(true)}
@@ -277,7 +273,6 @@ export default function Dashboard() {
                   </div>
                 </motion.div>
               </motion.div>
-
               <SocialsMedia />
 
               <motion.div className="mt-20" variants={itemVariants}>
@@ -285,7 +280,7 @@ export default function Dashboard() {
                   © 2024 Ibrahim P. Muritala, All Rights Reserved{" "}
                 </motion.p>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
