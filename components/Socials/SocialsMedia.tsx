@@ -71,7 +71,7 @@ const SocialsMedia = () => {
               linkedInHover ? "-translate-x-full transform opacity-0" : "translate-x-0 transform opacity-100"
             }`}
           >
-            <FaLinkedin className="" />
+            <FaLinkedin className="size-5" />
             <p className=" font-semibold">LinkedIn</p>
           </div>
           <div
@@ -96,7 +96,7 @@ const SocialsMedia = () => {
               gitHover ? "-translate-x-full transform opacity-0" : "translate-x-0 transform opacity-100"
             }`}
           >
-            <FaGithub className="" />
+            <FaGithub className="size-5" />
             <p className=" font-semibold">GitHub</p>
           </div>
           <div
@@ -120,7 +120,7 @@ const SocialsMedia = () => {
               twitterHover ? "-translate-x-full transform opacity-0" : "translate-x-0 transform opacity-100"
             }`}
           >
-            <FaXTwitter className="" />
+            <FaXTwitter className="size-5" />
             <p className=" font-semibold">Twitter</p>
           </div>
           <div
@@ -144,7 +144,7 @@ const SocialsMedia = () => {
               discordHover ? "-translate-x-full transform opacity-0" : "translate-x-0 transform opacity-100"
             }`}
           >
-            <FaDiscord className="" />
+            <FaDiscord className="size-5" />
             <p className=" font-semibold">Discord</p>
           </div>
           <div
@@ -173,7 +173,7 @@ const SocialsMedia = () => {
               instagramHover ? "-translate-x-full transform opacity-0" : "translate-x-0 transform opacity-100"
             }`}
           >
-            <AiFillInstagram className="" />
+            <AiFillInstagram className="size-5" />
             <p className=" font-semibold">Instagram</p>
           </div>
           <div
@@ -198,7 +198,7 @@ const SocialsMedia = () => {
               gitlabHover ? "-translate-x-full transform opacity-0" : "translate-x-0 transform opacity-100"
             }`}
           >
-            <FaGitlab className="" />
+            <FaGitlab className="size-5" />
             <p className=" font-semibold">GitLab</p>
           </div>
           <div
@@ -222,7 +222,7 @@ const SocialsMedia = () => {
               telegramHover ? "-translate-x-full transform opacity-0" : "translate-x-0 transform opacity-100"
             }`}
           >
-            <FaTelegram className="" />
+            <FaTelegram className="size-5" />
             <p className=" font-semibold">Telegram</p>
           </div>
           <div
@@ -246,7 +246,7 @@ const SocialsMedia = () => {
               tiktikHover ? "-translate-x-full transform opacity-0" : "translate-x-0 transform opacity-100"
             }`}
           >
-            <FaTiktok className="" />
+            <FaTiktok className="size-5" />
             <p className=" font-semibold">TikTok</p>
           </div>
           <div
