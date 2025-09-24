@@ -72,10 +72,10 @@ export default function Dashboard() {
   }
 
   return (
-    <section className="mb-40 flex h-full w-full items-center justify-center">
+    <section className="mb-40 flex size-full items-center justify-center">
       <div className="flex min-h-screen flex-col max-sm:w-full max-sm:p-4 md:max-w-[800px]">
         <DashboardNav />
-        <div className="mt-16 flex flex-grow">
+        <div className="mt-16 flex grow">
           <div className="w-full gap-6 max-md:flex-col max-md:px-0 md:mb-16">
             <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
               <motion.h2

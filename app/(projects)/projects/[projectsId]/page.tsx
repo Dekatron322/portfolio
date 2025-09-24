@@ -13,11 +13,11 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
   }
 
   return (
-    <section className="mb-40 flex h-full w-full items-start justify-center">
+    <section className="mb-40 flex size-full items-start justify-center">
       {/* Main Content Container */}
       <div className="flex min-h-screen max-w-[800px] flex-col">
         <ProjectsNav />
-        <div className="mt-20 flex flex-grow">
+        <div className="mt-20 flex grow">
           <div className="w-full gap-6 max-md:flex-col max-md:px-0 md:mb-16">
             <div className="">
               <div className="mx-auto max-w-4xl pt-6">
