@@ -128,7 +128,7 @@ const Experience = () => {
           {/* Company Header */}
           <div className="mb-20">
             <div className="flex w-full flex-col gap-10 max-sm:mb-3 md:flex-row md:items-start">
-              <div className="w-[70%]">
+              <div className="w-[70%] max-sm:w-full">
                 <h4 className="text-3xl font-semibold">{exp.company}</h4>
                 <p className="">{exp.location}</p>
               </div>
@@ -137,10 +137,7 @@ const Experience = () => {
                   <p className="font-medium">{exp.position}</p>
                   <p className="">{exp.period}</p>
                 </div>
-                <motion.div
-                  className="space-y-4"
-                  variants={listContainerVariants}
-                >
+                <motion.div className="space-y-4" variants={listContainerVariants}>
                   {exp.achievements.map((achievement, achievementIndex) => (
                     <motion.div key={achievementIndex} className="flex items-start" variants={itemVariants}>
                       <div className="dot-color mr-3 mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full"></div>

@@ -12,15 +12,14 @@ const Teams = () => {
     { name: "Saffron", logo: "/teams/saffron.svg" },
     { name: "Otech", logo: "/teams/otech.svg" },
     { name: "Chats", logo: "/teams/chats.png" },
+    { name: "Craft", logo: "/teams/craft.png" },
   ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+      transition: { staggerChildren: 0.1 },
     },
   }
 
@@ -29,9 +28,7 @@ const Teams = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.5,
-      },
+      transition: { duration: 0.5 },
     },
   }
 
@@ -40,26 +37,18 @@ const Teams = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-      },
+      transition: { type: "spring", stiffness: 100, damping: 15 },
     },
     hover: {
       scale: 1.05,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 15,
-      },
+      transition: { type: "spring", stiffness: 300, damping: 15 },
     },
   }
 
-  // Infinite scroll animation
+  // Infinite scroll animation (seamless)
   const infiniteScrollVariants = {
     animate: {
-      x: [0, -1030],
+      x: ["0%", "-50%"], // move half the width (since list is duplicated)
       transition: {
         x: {
           repeat: Infinity,
@@ -94,99 +83,32 @@ const Teams = () => {
         <div className="teams-gradient-right" />
 
         {/* Scrolling Logos */}
-        <motion.div className="flex gap-20" variants={infiniteScrollVariants} animate="animate">
-          {/* First set of logos */}
-          {teams.map((team, index) => (
-            <motion.div key={`first-${index}`} className="flex-shrink-0" variants={logoVariants} whileHover="hover">
-              <div className="flex h-16 w-40 items-center justify-center">
-                {(() => {
-                  const key = `${team.name}-scroll1-${index}`
-                  if (broken[key]) {
-                    return (
-                      <div className="flex h-12 w-28 items-center justify-center rounded border border-[#292929] bg-[#0f0f0f]">
-                        <span className="text-xs opacity-70">{team.name}</span>
-                      </div>
-                    )
-                  }
-                  return (
-                    <Image
-                      src={team.logo}
-                      alt={team.name}
-                      width={112}
-                      height={44}
-                      className="logo-mono h-11 w-28 object-contain"
-                      onError={() => setBroken((prev) => ({ ...prev, [key]: true }))}
-                    />
-                  )
-                })()}
-              </div>
-            </motion.div>
-          ))}
-
-          {/* Duplicate set for seamless looping */}
-          {teams.map((team, index) => (
-            <motion.div key={`second-${index}`} className="flex-shrink-0" variants={logoVariants} whileHover="hover">
-              <div className="flex h-16 w-40 items-center justify-center">
-                {(() => {
-                  const key = `${team.name}-scroll2-${index}`
-                  if (broken[key]) {
-                    return (
-                      <div className="flex h-12 w-28 items-center justify-center rounded border border-[#292929] bg-[#0f0f0f]">
-                        <span className="text-xs opacity-70">{team.name}</span>
-                      </div>
-                    )
-                  }
-                  return (
-                    <Image
-                      src={team.logo}
-                      alt={team.name}
-                      width={112}
-                      height={44}
-                      className="logo-mono h-11 w-28 object-contain"
-                      onError={() => setBroken((prev) => ({ ...prev, [key]: true }))}
-                    />
-                  )
-                })()}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Static Grid for Mobile */}
-      <motion.div className="mt-8 grid grid-cols-2 gap-6 md:hidden" variants={containerVariants}>
-        {teams.map((team, index) => (
-          <motion.div
-            key={index}
-            className="flex items-center justify-center rounded-lg border border-[#292929] bg-[#0f0f0f] p-4"
-            variants={logoVariants}
-            whileHover="hover"
-          >
-            <div className="flex h-12 w-full items-center justify-center">
-              {(() => {
-                const key = `${team.name}-grid-${index}`
-                if (broken[key]) {
-                  return (
-                    <div className="flex h-10 w-32 items-center justify-center rounded border border-[#292929] bg-[#0f0f0f]">
+        <motion.div className="flex w-max gap-20" variants={infiniteScrollVariants} animate="animate">
+          {[...teams, ...teams].map((team, index) => {
+            const key = `${team.name}-${index}`
+            return (
+              <motion.div key={key} className="flex-shrink-0" variants={logoVariants} whileHover="hover">
+                <div className="flex h-16 w-40 items-center justify-center">
+                  {broken[key] ? (
+                    <div className="flex h-12 w-28 items-center justify-center rounded border border-[#292929] bg-[#0f0f0f]">
                       <span className="text-xs opacity-70">{team.name}</span>
                     </div>
-                  )
-                }
-                return (
-                  <Image
-                    src={team.logo}
-                    alt={team.name}
-                    width={128}
-                    height={24}
-                    className="logo-mono h-6 w-32 object-contain"
-                    onError={() => setBroken((prev) => ({ ...prev, [key]: true }))}
-                  />
-                )
-              })()}
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+                  ) : (
+                    <Image
+                      src={team.logo}
+                      alt={team.name}
+                      width={112}
+                      height={44}
+                      className="logo-mono h-11 w-28 object-contain"
+                      onError={() => setBroken((prev) => ({ ...prev, [key]: true }))}
+                    />
+                  )}
+                </div>
+              </motion.div>
+            )
+          })}
+        </motion.div>
+      </div>
     </motion.div>
   )
 }

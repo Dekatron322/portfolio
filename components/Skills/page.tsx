@@ -12,6 +12,20 @@ const Skills = () => {
     ["No-Code Development", "+More"],
   ]
 
+  // Mobile-specific arrangement (2-1 pattern)
+  const mobileSkills = [
+    ["Visual Design", "UI Design"],
+    ["UX Design"],
+    ["Product Strategy", "Product Thinking"],
+    ["Usability Testing"],
+    ["UX Research", "Design Systems"],
+    ["Icon Design"],
+    ["Illustration Design", "Interaction Design"],
+    ["Prototyping"],
+    ["Tailwind CSS", "No-Code Development"],
+    ["+More"],
+  ]
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,14 +83,38 @@ const Skills = () => {
         <p className="clash mt-2">I&apos;ve showcased below my exceptional skill sets, setting me apart from others.</p>
       </motion.div>
 
-      {/* Skills Grid */}
-      <motion.div className="flex  w-full flex-col gap-6" variants={containerVariants}>
+      {/* Desktop Skills Grid (hidden on mobile) */}
+      <motion.div className="hidden w-full flex-col gap-6 md:flex" variants={containerVariants}>
         {skills.map((skillRow, rowIndex) => (
-          <motion.div key={rowIndex} className="flex w-full gap-4 max-sm:flex-col" variants={itemVariants}>
+          <motion.div key={rowIndex} className="flex w-full gap-4" variants={itemVariants}>
             {skillRow.map((skill, skillIndex) => (
               <motion.div key={skillIndex} className="flex-1" variants={skillItemVariants} whileHover="hover">
                 <div className="skills-style flex h-full items-center  rounded-lg px-4 py-3 text-center transition-colors duration-300">
-                  <p className="text-sm font-medium  md:text-base">{skill}</p>
+                  <p className="text-sm font-medium md:text-base">{skill}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Mobile Skills Grid (hidden on desktop) */}
+      <motion.div className="flex w-full flex-col gap-3 md:hidden" variants={containerVariants}>
+        {mobileSkills.map((skillRow, rowIndex) => (
+          <motion.div
+            key={rowIndex}
+            className={`flex w-full gap-3 ${skillRow.length === 2 ? "flex-row" : "flex-row "}`}
+            variants={itemVariants}
+          >
+            {skillRow.map((skill, skillIndex) => (
+              <motion.div
+                key={skillIndex}
+                className={skillRow.length === 2 ? "flex-1" : "max-w-full flex-1"}
+                variants={skillItemVariants}
+                whileHover="hover"
+              >
+                <div className="skills-style flex h-full items-center  rounded-lg px-4 py-3 text-center transition-colors duration-300">
+                  <p className="text-sm font-medium md:text-base">{skill}</p>
                 </div>
               </motion.div>
             ))}
