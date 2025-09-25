@@ -294,7 +294,7 @@ export default function Dashboard() {
                 <Link
                   href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
                   target="_blank"
-                  className="cv cv-text relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-3   transition-colors duration-300"
+                  className="cv cv-text relative flex w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-3 transition-colors duration-300"
                   onMouseEnter={() => setCvHover(true)}
                   onMouseLeave={() => setCvHover(false)}
                 >
@@ -330,7 +330,7 @@ export default function Dashboard() {
                       <motion.div
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 "
                       >
                         <p className="font-semibold text-white">Email Copied!</p>
                         <FiCheckCircle className="ml-2 text-lg font-semibold text-white" />
