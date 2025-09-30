@@ -85,7 +85,7 @@ export default function Dashboard() {
                 I craft human-centered products and designs that convert{" "}
                 <span className="text-[#f4b601]">effectively</span>.{" "}
               </motion.h2>
-              <motion.p className=" mt-2 text-lg " variants={fadeInUp}>
+              <motion.p className="small-text mt-2 text-lg " variants={fadeInUp}>
                 Ibrahim Muritala is a multidisciplinary software engineer with a background in physics and electronics
                 and proficiency in frontend, backend, web3, and interaction design, as well as Framer development
                 (no-code).
@@ -163,7 +163,7 @@ export default function Dashboard() {
             >
               <motion.div variants={itemVariants}>
                 <h5 className="text-3xl font-bold">Projects</h5>
-                <p className="clash mb-3">Some of my recent work.</p>
+                <p className="clash small-text mb-3">Some of my recent work.</p>
               </motion.div>
               <div className="-z-10 grid w-full gap-6 max-sm:grid-cols-1 md:grid-cols-2">
                 <ProjectCard />

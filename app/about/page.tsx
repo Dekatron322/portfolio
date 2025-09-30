@@ -140,17 +140,17 @@ export default function Dashboard() {
               </motion.h2>
 
               <motion.div variants={staggerContainer}>
-                <motion.p className="clash mt-4 font-normal md:text-lg" variants={paragraphVariants}>
+                <motion.p className="clash small-text mt-4 font-normal md:text-lg" variants={paragraphVariants}>
                   A multidisciplinary designer with a background in finance. I&lsquo;m proficient in product, icon,
                   illustration, and interaction design, as well as Framer development (No-code).
                 </motion.p>
 
-                <motion.p className="clash mt-4 font-normal md:text-lg" variants={paragraphVariants}>
+                <motion.p className="clash small-text mt-4 font-normal md:text-lg" variants={paragraphVariants}>
                   I love crafting human-centered products that shape the future of purposeful digital products and
                   designs that convert effectively.
                 </motion.p>
 
-                <motion.p className="clash mt-4 font-normal md:text-lg" variants={paragraphVariants}>
+                <motion.p className="clash small-text mt-4 font-normal md:text-lg" variants={paragraphVariants}>
                   I have loved design since I was 11 years old. I can vividly remember how fascinated I would become
                   when looking at business logos and signage every time I stepped out in a moving vehicle.
                 </motion.p>
@@ -253,7 +253,7 @@ export default function Dashboard() {
             >
               <motion.div variants={itemVariants}>
                 <h5 className="text-3xl font-bold">Experiences</h5>
-                <p className="clash mb-3">Showcasing my professional work experiences.</p>
+                <p className="small-text mb-3">Showcasing my professional work experiences.</p>
               </motion.div>
 
               <motion.div className="-z-10 w-full" variants={itemVariants}>
@@ -282,7 +282,7 @@ export default function Dashboard() {
                 Let&apos;s work together
               </motion.h5>
 
-              <motion.p className="clash my-4 text-center" variants={itemVariants}>
+              <motion.p className="small-text clash my-4 text-center" variants={itemVariants}>
                 I would love to hear from you, so feel free to reach out
               </motion.p>
 

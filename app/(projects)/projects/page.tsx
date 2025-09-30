@@ -86,7 +86,7 @@ export default function Dashboard() {
             >
               <motion.div variants={itemVariants}>
                 <h5 className="text-3xl font-bold">Projects</h5>
-                <p className="clash mb-3">Some of my recent work.</p>
+                <p className="clash small-text mb-3">Some of my recent work.</p>
               </motion.div>
               <div className="-z-10 grid w-full gap-6 max-sm:grid-cols-1 md:grid-cols-2">
                 <ProjectCard />

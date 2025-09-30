@@ -32,10 +32,12 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
                   alt="project-image"
                   className="mb-6 w-full rounded-lg"
                 />
-                <p id="details" className="mb-4 text-lg">
+                <p id="details" className="mb-4 text-lg ">
                   {project.description}
                 </p>
-                <p id="info">{project.info}</p>
+                <p id="info" className="small-text">
+                  {project.info}
+                </p>
                 {/* Add more project details here */}
               </div>
             </div>

@@ -80,7 +80,9 @@ const Skills = () => {
       {/* Header Section */}
       <motion.div variants={itemVariants} className="mb-12">
         <h3 className="text-3xl font-bold">Skills</h3>
-        <p className="clash mt-2">I&apos;ve showcased below my exceptional skill sets, setting me apart from others.</p>
+        <p className="clash small-text mt-2">
+          I&apos;ve showcased below my exceptional skill sets, setting me apart from others.
+        </p>
       </motion.div>
 
       {/* Desktop Skills Grid (hidden on mobile) */}

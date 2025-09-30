@@ -109,6 +109,14 @@ body {
   background-color: #fafafa;
 }
 
+.small-text {
+  @apply text-[#666666];
+}
+
+[data-theme="dark"] .small-text {
+  @apply text-[#A1A1A1];
+}
+
 .cv:hover {
   background-color: #f4b601;
 }

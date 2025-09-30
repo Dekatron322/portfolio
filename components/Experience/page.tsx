@@ -135,13 +135,13 @@ const Experience = () => {
               <div className="flex w-full flex-col gap-4">
                 <div className="mt-2 md:mt-0">
                   <p className="font-medium">{exp.position}</p>
-                  <p className="">{exp.period}</p>
+                  <p className="small-text">{exp.period}</p>
                 </div>
                 <motion.div className="space-y-4" variants={listContainerVariants}>
                   {exp.achievements.map((achievement, achievementIndex) => (
                     <motion.div key={achievementIndex} className="flex items-start" variants={itemVariants}>
                       <div className="dot-color mr-3 mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full"></div>
-                      <p className="leading-relaxed">{achievement}</p>
+                      <p className="small-text leading-relaxed">{achievement}</p>
                     </motion.div>
                   ))}
                 </motion.div>

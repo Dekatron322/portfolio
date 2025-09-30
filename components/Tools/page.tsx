@@ -129,7 +129,9 @@ const Tools = () => {
     >
       <motion.div variants={itemVariants} className="mb-12">
         <h3 className="text-3xl font-bold">Toolkit</h3>
-        <p className="clash mt-2">Here are my consistent toolkit of essential tools and software for work.</p>
+        <p className="clash small-text mt-2">
+          Here are my consistent toolkit of essential tools and software for work.
+        </p>
       </motion.div>
 
       {/* Desktop Tools Grid (hidden on mobile) */}
@@ -164,7 +166,7 @@ const Tools = () => {
 
                   <div className="flex flex-col">
                     <p className="text-sm font-medium md:text-base">{tool.name}</p>
-                    <p className="text-xs">{tool.category}</p>
+                    <p className="small-text text-xs">{tool.category}</p>
                   </div>
                 </div>
               </motion.div>
@@ -214,7 +216,7 @@ const Tools = () => {
 
                   <div className="flex flex-col">
                     <p className="text-sm font-medium md:text-base">{tool.name}</p>
-                    <p className="text-xs">{tool.category}</p>
+                    <p className="small-text text-xs">{tool.category}</p>
                   </div>
                 </div>
               </motion.div>

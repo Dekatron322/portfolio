@@ -55,10 +55,10 @@ export default function ProjectCard() {
             <div className="p-4">
               <div className="flex gap-2">
                 <p className="containerbg rounded-full px-2 py-1 text-sm font-medium">{project.year}</p>
-                <p className="containerbg rounded-full px-2 py-1 text-sm font-medium">{project.category}</p>
+                <p className="containerbg rounded-full px-2 py-1 text-sm font-medium ">{project.category}</p>
                 <p className="containerbg rounded-full px-2 py-1 text-sm font-medium">{project.industry}</p>
               </div>
-              <p className="clash mt-2">{project.title}</p>
+              <p className="clash small-text mt-2">{project.title}</p>
               <h5 className="clash text-xl font-bold">{project.description}</h5>
             </div>
             <div
@@ -66,7 +66,7 @@ export default function ProjectCard() {
                 hoverIndex === index ? "opacity-100" : "hidden opacity-0"
               }`}
             >
-              <p>{project.info}</p>
+              <p className=" small-text">{project.info}</p>
             </div>
           </div>
           <div
