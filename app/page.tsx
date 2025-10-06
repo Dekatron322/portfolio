@@ -1,7 +1,7 @@
 "use client"
 import DashboardNav from "components/Navbar/DashboardNav"
 import Footer from "components/Footer/Footer"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { HiOutlineMail } from "react-icons/hi"
 import { GoCopy } from "react-icons/go"
 import { CgFileDocument } from "react-icons/cg"
@@ -21,6 +21,37 @@ export default function Dashboard() {
   const [hoverCard, setHoverCard] = useState(false)
   const [copied, setCopied] = useState(false)
   const [callCopied, setCallCopied] = useState(false)
+  const [typedLetters, setTypedLetters] = useState<Set<string>>(new Set())
+  const animationStarted = useRef(false)
+
+  const fullText = "I Build High-Performance, User-Centric Products That Drive Conversion and Engagement."
+  const words = fullText.split(" ")
+
+  useEffect(() => {
+    if (animationStarted.current) return
+
+    animationStarted.current = true
+    let currentIndex = 0
+    const totalLetters = fullText.length
+
+    const typeText = () => {
+      if (currentIndex <= totalLetters) {
+        const currentText = fullText.substring(0, currentIndex)
+        const lettersArray = currentText.split("")
+        const newTypedLetters = new Set<string>()
+
+        lettersArray.forEach((letter, index) => {
+          newTypedLetters.add(`${index}-${letter}`)
+        })
+
+        setTypedLetters(newTypedLetters)
+        currentIndex++
+        setTimeout(typeText, 50)
+      }
+    }
+
+    typeText()
+  }, [fullText])
 
   const handleCopy = () => {
     navigator.clipboard.writeText("cygnux696@gmail.com")
@@ -34,25 +65,64 @@ export default function Dashboard() {
     setTimeout(() => setCallCopied(false), 2000)
   }
 
+  const isLetterTyped = (positionIndex: number, letter: string) => {
+    return typedLetters.has(`${positionIndex}-${letter}`)
+  }
+
+  let positionIndex = 0
+  const renderAnimatedText = () => {
+    return words.map((word, wordIndex) => {
+      const letters = word.split("")
+      const isEngagementWord = word === "Engagement."
+
+      const wordElement = (
+        <span key={`word-${wordIndex}`} className={`word ${isEngagementWord ? "text-[#f4b601]" : ""}`}>
+          {letters.map((letter, letterIndex) => {
+            const currentPosition = positionIndex++
+            const isTyped = isLetterTyped(currentPosition, letter)
+            return (
+              <span key={`letter-${wordIndex}-${letterIndex}`} className={`letter ${isTyped ? "typed" : ""}`}>
+                {letter}
+              </span>
+            )
+          })}
+        </span>
+      )
+
+      if (wordIndex < words.length - 1) {
+        const spacePosition = positionIndex++
+        const isSpaceTyped = isLetterTyped(spacePosition, " ")
+        return (
+          <span key={`word-space-${wordIndex}`}>
+            {wordElement}
+            <span className={`word-space ${isSpaceTyped ? "typed" : ""}`}> </span>
+          </span>
+        )
+      }
+
+      return wordElement
+    })
+  }
+
   // Faster container variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1, // Reduced from 0.2
+        staggerChildren: 0.1,
       },
     },
   }
 
   // Faster child item animation variants
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 }, // Reduced y distance
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3, // Reduced from 0.5
+        duration: 0.3,
         ease: "easeOut",
       },
     },
@@ -72,23 +142,22 @@ export default function Dashboard() {
   }
 
   return (
-    <section className="flex size-full items-center justify-center  md:mb-40">
+    <section className="flex size-full items-center justify-center md:mb-40">
       <div className="flex min-h-screen flex-col max-sm:w-full max-sm:p-4 md:max-w-[800px]">
         <DashboardNav />
         <div className="mt-16 flex grow">
           <div className="w-full gap-6 max-md:flex-col max-md:px-0 md:mb-16">
             <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
               <motion.h2
-                className="mt-14 h-full text-[46px] font-bold max-sm:mt-24 max-sm:text-3xl md:leading-[60px]"
+                className="mt-14 h-full text-[40px] font-bold max-sm:mt-24 max-sm:text-3xl md:leading-[50px]"
                 variants={fadeInUp}
               >
-                I craft human-centered products and designs that convert{" "}
-                <span className="text-[#f4b601]">effectively</span>.{" "}
+                {renderAnimatedText()}
               </motion.h2>
-              <motion.p className="small-text mt-2 text-lg " variants={fadeInUp}>
-                Ibrahim Muritala is a multidisciplinary software engineer with a background in physics and electronics
-                and proficiency in frontend, backend, web3, and interaction design, as well as Framer development
-                (no-code).
+              <motion.p className="small-text mt-2 text-lg" variants={fadeInUp}>
+                A multidisciplinary Software Engineer with a foundational background in Physics and Electronics,
+                offering a unique, analytical approach to problem-solving. I specialize in building end-to-end digital
+                products, with proven proficiency across the entire stack: frontend, backend, and Web3 development.
               </motion.p>
             </motion.div>
 
@@ -96,7 +165,7 @@ export default function Dashboard() {
               <Link
                 href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
                 target="_blank"
-                className="cv cv-text relative flex min-w-32 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-2 transition-colors duration-300 max-sm:w-full max-sm:text-xs "
+                className="cv cv-text relative flex min-w-32 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-2 transition-colors duration-300 max-sm:w-full max-sm:text-xs"
                 onMouseEnter={() => setCvHover(true)}
                 onMouseLeave={() => setCvHover(false)}
               >
@@ -290,6 +359,42 @@ export default function Dashboard() {
         </div>
       </div>
       <Footer />
+
+      {/* Text Animation Styles */}
+      <style jsx global>{`
+        .word {
+          white-space: nowrap;
+          display: inline;
+        }
+        .word-space {
+          opacity: 0;
+          display: inline;
+          transform: scale(0.8);
+        }
+        .letter {
+          opacity: 0;
+          display: inline-block;
+          transform: scale(0.8);
+        }
+        .letter.typed,
+        .word-space.typed {
+          animation: letterAppear 0.2s ease-in forwards;
+        }
+        @keyframes letterAppear {
+          0% {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          60% {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      `}</style>
     </section>
   )
 }

@@ -60,7 +60,7 @@ export default function ProjectCard() {
                 <p className="containerbg rounded-full px-2 py-1 text-sm font-medium ">{project.category}</p>
                 <p className="containerbg rounded-full px-2 py-1 text-sm font-medium">{project.industry}</p>
               </div>
-              <p className="clash small-text mt-2">{project.title}</p>
+              <p className="clash small-text mb-1 mt-2">{project.title}</p>
               <h5 className="clash text-xl font-bold">{project.description}</h5>
             </div>
             <div
