@@ -29,7 +29,7 @@ export default function ProjectCard() {
     <>
       {projects.map((project, index) => (
         <motion.div
-          className="card-bg relative h-[450px] overflow-hidden rounded-xl border border-[#FFFFFF1A]"
+          className="card-bg relative h-[480px] overflow-hidden rounded-xl border border-[#FFFFFF1A]"
           onMouseEnter={() => setHoverIndex(index)}
           onMouseLeave={() => setHoverIndex(-1)}
           key={index}

@@ -4,26 +4,27 @@ import { motion } from "framer-motion"
 
 const Skills = () => {
   const skills = [
-    ["Visual Design", "UI Design", "UX Design"],
-    ["Product Strategy", "Product Thinking"],
-    ["Usability Testing", "UX Research", "Design Systems"],
-    ["Icon Design", "Illustration Design"],
-    ["Interaction Design", "Prototyping", "Tailwind CSS"],
-    ["No-Code Development", "+More"],
+    ["TypeScript", "State Management", "Version Control (Git)"],
+    ["Performance Optimization", "Testing Strategy"],
+    ["SEO Principles", "Monorepo Management", "Deployment & CI/CD"],
+    ["Design Systems & Component Architecture", "Project Planning & Estimation"],
+    ["Backend for Frontend (BFF)", "Cross-Platform Development", "Web3 / Blockchain"],
+
+    ["Tailwind CSS", "+More"],
   ]
 
   // Mobile-specific arrangement (2-1 pattern)
   const mobileSkills = [
-    ["Visual Design", "UI Design"],
-    ["UX Design"],
-    ["Product Strategy", "Product Thinking"],
-    ["Usability Testing"],
-    ["UX Research", "Design Systems"],
-    ["Icon Design"],
-    ["Illustration Design", "Interaction Design"],
-    ["Prototyping"],
-    ["Tailwind CSS", "No-Code Development"],
-    ["+More"],
+    ["TypeScript", "State Management"],
+    ["Version Control (Git)"],
+    ["Web3 / Blockchain", "Testing Strategy"],
+
+    ["Design Systems & Component Architecture"],
+    ["Monorepo Management", "Deployment & CI/CD"],
+    ["Project Planning & Estimation"],
+    ["Backend for Frontend (BFF)", "Performance Optimization"],
+    ["Cross-Platform Development"],
+    ["Tailwind CSS", "+More"],
   ]
 
   const containerVariants = {

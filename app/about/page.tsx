@@ -141,25 +141,22 @@ export default function Dashboard() {
 
               <motion.div variants={staggerContainer}>
                 <motion.p className="clash small-text mt-4 font-normal md:text-lg" variants={paragraphVariants}>
-                  A multidisciplinary designer with a background in finance. I&lsquo;m proficient in product, icon,
-                  illustration, and interaction design, as well as Framer development (No-code).
+                  A multidisciplinary designer with a background in finance, specializing in product, icon,
+                  illustration, and interaction design. I leverage Framer for no-code development to build
+                  human-centered digital products that are not only purposeful but are also crafted to convert
+                  effectively.
                 </motion.p>
 
                 <motion.p className="clash small-text mt-4 font-normal md:text-lg" variants={paragraphVariants}>
-                  I love crafting human-centered products that shape the future of purposeful digital products and
-                  designs that convert effectively.
-                </motion.p>
-
-                <motion.p className="clash small-text mt-4 font-normal md:text-lg" variants={paragraphVariants}>
-                  I have loved design since I was 11 years old. I can vividly remember how fascinated I would become
-                  when looking at business logos and signage every time I stepped out in a moving vehicle.
+                  My passion for design was sparked in childhood, observing the power of branding in everyday life, and
+                  has evolved into a dedication for shaping the future of digital experiences.
                 </motion.p>
               </motion.div>
             </motion.div>
 
             {/* Action Buttons */}
             <motion.div
-              className="mt-8 flex w-full gap-4 max-sm:flex-col"
+              className="mt-8 flex w-full gap-4 "
               variants={itemVariants}
               initial="hidden"
               animate="visible"
@@ -294,7 +291,7 @@ export default function Dashboard() {
                 <Link
                   href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
                   target="_blank"
-                  className="cv cv-text relative flex w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-3 transition-colors duration-300"
+                  className="cv cv-text relative flex w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-3 py-3 transition-colors duration-300 max-sm:h-10"
                   onMouseEnter={() => setCvHover(true)}
                   onMouseLeave={() => setCvHover(false)}
                 >

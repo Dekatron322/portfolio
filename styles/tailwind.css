@@ -94,7 +94,7 @@ body {
 }
 
 .cv {
-  background-color: #0a0a0a;
+  @apply bg-[#0a0a0a];
 }
 
 /* p {

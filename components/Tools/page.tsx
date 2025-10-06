@@ -13,7 +13,7 @@ const Tools = () => {
     ],
     [
       { name: "Figma", category: "Design", logo: "/tools/figma.webp" },
-      { name: "Framer", category: "No-Code", logo: "/tools/framer.avif" },
+      { name: "Git", category: "Version Control", logo: "/tools/git.png" },
     ],
     [
       { name: "Slack", category: "Communication", logo: "/tools/slack.webp" },
@@ -22,11 +22,11 @@ const Tools = () => {
     ],
     [
       { name: "G-Suite", category: "Workspace", logo: "/tools/gsuite.avif" },
-      { name: "Maze", category: "Research", logo: "/tools/maze.avif" },
+      { name: "Docker", category: "Container", logo: "/tools/docker.webp" },
     ],
     [
       { name: "Chrome", category: "Browser", logo: "/tools/chrome.webp" },
-      { name: "Zoom", category: "Meeting", logo: "/tools/zoom.webp" },
+      { name: "Swagger", category: "API Testing", logo: "/tools/Swagger-logo.png" },
       { name: "Meet", category: "Meeting", logo: "/tools/meet.webp" },
     ],
     [
@@ -49,7 +49,7 @@ const Tools = () => {
     [{ name: "Postman", category: "API Testing", logo: "/tools/postman.webp" }],
     [
       { name: "Figma", category: "Design", logo: "/tools/figma.webp" },
-      { name: "Framer", category: "No-Code", logo: "/tools/framer.avif" },
+      { name: "Git", category: "Version Control", logo: "/tools/git.png" },
     ],
     [{ name: "Slack", category: "Communication", logo: "/tools/slack.webp" }],
     [
@@ -58,10 +58,11 @@ const Tools = () => {
     ],
     [{ name: "G-Suite", category: "Workspace", logo: "/tools/gsuite.avif" }],
     [
-      { name: "Maze", category: "Research", logo: "/tools/maze.avif" },
+      { name: "Docker", category: "Container", logo: "/tools/docker.webp" },
+
       { name: "Chrome", category: "Browser", logo: "/tools/chrome.webp" },
     ],
-    [{ name: "Zoom", category: "Meeting", logo: "/tools/zoom.webp" }],
+    [{ name: "Swagger", category: "API Testing", logo: "/tools/Swagger-logo.png" }],
     [
       { name: "Meet", category: "Meeting", logo: "/tools/meet.webp" },
       { name: "Notes", category: "Note", logo: "/tools/note.avif" },
