@@ -8,7 +8,7 @@ export const projects = [
     description:
       "A User-centered Electronic Medical Record (EMR) System Integrating health maintenance organizations (HMOs)",
     info: "The Stacks ecosystem is growing at a bullish pace. With about 10 protocols & communities, 19 partners & integrations, 12 tools and utilities, and about 27 dApps are currently built on the ecosystem. Stacks ecosystem is becoming a significant player in the decentralized market and web3 as a whole.",
-    imageSrc: "/Thumbnail.png",
+    imageSrc: "/bluremit.svg",
     link: "#",
   },
   {
@@ -19,7 +19,7 @@ export const projects = [
     title: "Altima",
     description: "A simplified user centered preoder system, aimed at simplifying preoder of smart door handles",
     info: "The Stacks ecosystem is growing at a bullish pace. With about 10 protocols & communities, 19 partners & integrations, 12 tools and utilities, and about 27 dApps are currently built on the ecosystem. Stacks ecosystem is becoming a significant player in the decentralized market and web3 as a whole.",
-    imageSrc: "/thumbnail01.png",
+    imageSrc: "/ultra.svg",
     link: "#",
   },
 
@@ -31,7 +31,7 @@ export const projects = [
     title: "AMD Facility Management",
     description: "A simplified user centered preoder system, aimed at simplifying preoder of smart door handles",
     info: "The Stacks ecosystem is growing at a bullish pace. With about 10 protocols & communities, 19 partners & integrations, 12 tools and utilities, and about 27 dApps are currently built on the ecosystem. Stacks ecosystem is becoming a significant player in the decentralized market and web3 as a whole.",
-    imageSrc: "/amd.png",
+    imageSrc: "/ultra-web.png",
     link: "#",
   },
   {
@@ -42,7 +42,18 @@ export const projects = [
     title: "Kaduna Electric",
     description: "A simplified user centered preoder system, aimed at simplifying preoder of smart door handles",
     info: "The Stacks ecosystem is growing at a bullish pace. With about 10 protocols & communities, 19 partners & integrations, 12 tools and utilities, and about 27 dApps are currently built on the ecosystem. Stacks ecosystem is becoming a significant player in the decentralized market and web3 as a whole.",
-    imageSrc: "/kad.png",
+    imageSrc: "/chats2.svg",
+    link: "#",
+  },
+  {
+    id: 6,
+    year: "2025",
+    category: "Web 3",
+    industry: "Finance",
+    title: "Chainkeeping",
+    description: "A simplified user centered preoder system, aimed at simplifying preoder of smart door handles",
+    info: "The Stacks ecosystem is growing at a bullish pace. With about 10 protocols & communities, 19 partners & integrations, 12 tools and utilities, and about 27 dApps are currently built on the ecosystem. Stacks ecosystem is becoming a significant player in the decentralized market and web3 as a whole.",
+    imageSrc: "/saffron.svg",
     link: "#",
   },
   {
@@ -53,7 +64,7 @@ export const projects = [
     title: "Chainkeeping",
     description: "A simplified user centered preoder system, aimed at simplifying preoder of smart door handles",
     info: "The Stacks ecosystem is growing at a bullish pace. With about 10 protocols & communities, 19 partners & integrations, 12 tools and utilities, and about 27 dApps are currently built on the ecosystem. Stacks ecosystem is becoming a significant player in the decentralized market and web3 as a whole.",
-    imageSrc: "/Dshboard (3).png",
+    imageSrc: "/susmo.svg",
     link: "#",
   },
   // Add more project objects as needed

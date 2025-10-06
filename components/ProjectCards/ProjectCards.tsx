@@ -42,7 +42,7 @@ export default function ProjectCard() {
         >
           <div className={`transition-transform duration-500 ${hoverIndex === index ? "-translate-y-full" : ""}`}>
             <Image
-              className="h-auto w-full overflow-hidden rounded-t-xl  "
+              className=" w-full overflow-hidden rounded-t-xl  "
               src={project.imageSrc}
               width={400}
               height={400}
@@ -50,7 +50,9 @@ export default function ProjectCard() {
             />
           </div>
           <div
-            className={`relative transition-transform duration-500 ${hoverIndex === index ? "-translate-y-60" : ""}`}
+            className={`relative mt-4 transition-transform duration-500 ${
+              hoverIndex === index ? "-translate-y-60" : ""
+            }`}
           >
             <div className="p-4">
               <div className="flex gap-2">
