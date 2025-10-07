@@ -4,6 +4,8 @@ import { projects } from "utils"
 import ProjectsNav from "../../../../components/Navbar/ProjectsNav"
 import { motion } from "framer-motion"
 import { useEffect } from "react"
+import ContactSection from "components/ContactSection/ContactSection"
+import Footer from "components/Footer/Footer"
 
 // Animation variants
 const pageVariants = {
@@ -121,6 +123,45 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
   const projectId = parseInt(params.projectsId, 10)
   const project = projects.find((p) => p.id === projectId)
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        duration: 0.8,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        damping: 15,
+        stiffness: 100,
+        duration: 0.6,
+      },
+    },
+  }
+
+  const buttonVariants = {
+    initial: { scale: 1 },
+    hover: {
+      scale: 1.02,
+      transition: { type: "spring", stiffness: 300, damping: 15 },
+    },
+    tap: { scale: 0.98 },
+  }
+
   // Smooth scroll function
   const smoothScrollTo = (targetId: string) => {
     const targetElement = document.getElementById(targetId.replace("#", ""))
@@ -189,7 +230,7 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
         <ProjectsNav />
 
         <motion.div variants={staggerContainer} initial="hidden" animate="show" className="mt-20 flex grow">
-          <div className="w-full gap-6 max-md:flex-col max-md:px-0 md:mb-16">
+          <div className="w-full gap-6 max-md:flex-col max-md:px-0 md:mb-0">
             <div>
               <div className="mx-auto max-w-4xl pt-6">
                 {/* Overview Section */}
@@ -601,6 +642,13 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="border-style my-20 border-t"
               />
+
+              <ContactSection
+                containerVariants={containerVariants}
+                itemVariants={itemVariants}
+                buttonVariants={buttonVariants}
+              />
+              <Footer />
             </div>
           </div>
         </motion.div>

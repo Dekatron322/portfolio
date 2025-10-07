@@ -15,6 +15,7 @@ import SocialsMedia from "components/Socials/SocialsMedia"
 import Skills from "components/Skills/page"
 import Tools from "components/Tools/page"
 import Teams from "components/Teams/page"
+import ContactSection from "components/ContactSection/ContactSection"
 
 export default function Dashboard() {
   const [hover, setHover] = useState(false)
@@ -129,7 +130,7 @@ export default function Dashboard() {
         <DashboardNav />
 
         <div className="mt-16 flex grow">
-          <div className="w-full gap-6 max-md:flex-col max-md:px-0 md:mb-16">
+          <div className="w-full gap-6 max-md:flex-col max-md:px-0 md:mb-0">
             {/* Header Section */}
             <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
               <motion.h2
@@ -268,148 +269,11 @@ export default function Dashboard() {
             </motion.div>
 
             {/* Contact Section */}
-            <motion.div
-              className="mt-20 flex flex-col items-center"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={containerVariants}
-            >
-              <motion.h5 className="text-center text-4xl font-bold" variants={itemVariants}>
-                Let&apos;s work together
-              </motion.h5>
-
-              <motion.p className="small-text clash my-4 text-center" variants={itemVariants}>
-                I would love to hear from you, so feel free to reach out
-              </motion.p>
-
-              <motion.div
-                className="mt-5 flex gap-4 max-sm:w-full max-sm:flex-col max-sm:items-center max-sm:justify-center"
-                variants={itemVariants}
-              >
-                {/* CV Button */}
-                <Link
-                  href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
-                  target="_blank"
-                  className="cv cv-text relative flex w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-3 py-3 transition-colors duration-300 max-sm:h-10"
-                  onMouseEnter={() => setCvHover(true)}
-                  onMouseLeave={() => setCvHover(false)}
-                >
-                  <div
-                    className={`absolute flex items-center gap-2 transition-transform duration-300 ${
-                      cvHover ? "-translate-x-full transform opacity-0" : "translate-x-0 transform opacity-100"
-                    }`}
-                  >
-                    <CgFileDocument className="cv-text" />
-                    <p className="cv-text font-semibold">CV/Résumé</p>
-                  </div>
-                  <div
-                    className={`absolute flex items-center gap-2 transition-transform duration-300 ${
-                      cvHover ? "translate-x-0 transform opacity-100" : "translate-x-full transform opacity-0"
-                    }`}
-                  >
-                    <p className="cv-text-hover font-semibold">Download</p>
-                    <BsDownload className="cv-text-hover" />
-                  </div>
-                </Link>
-
-                {/* Email Button */}
-                <motion.div variants={buttonVariants} initial="initial" whileHover="hover" whileTap="tap">
-                  <div
-                    className={`relative flex cursor-pointer items-center justify-center gap-2 rounded-full px-2 py-3 transition-all duration-500 ${
-                      copied ? "email-click" : hover ? "email" : "email"
-                    }`}
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(false)}
-                    onClick={handleCopy}
-                  >
-                    {copied ? (
-                      <motion.div
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        className="flex items-center gap-2 "
-                      >
-                        <p className="font-semibold text-white">Email Copied!</p>
-                        <FiCheckCircle className="ml-2 text-lg font-semibold text-white" />
-                      </motion.div>
-                    ) : (
-                      <>
-                        <HiOutlineMail
-                          className={`email-text text-lg font-semibold transition-all duration-300 ${
-                            hover ? "-translate-x-full transform opacity-0" : "opacity-100"
-                          }`}
-                        />
-                        <p
-                          className={`email-text font-semibold transition-all duration-300 ${
-                            hover ? "-translate-x-6" : "translate-x-0"
-                          }`}
-                        >
-                          cygnux696@gmail.com
-                        </p>
-                        <GoCopy
-                          className={`email-text absolute right-2 text-lg font-semibold transition-all duration-300 ${
-                            hover ? "translate-x-0 transform opacity-100" : "translate-x-full transform opacity-0"
-                          }`}
-                        />
-                      </>
-                    )}
-                  </div>
-                </motion.div>
-
-                {/* Phone Button */}
-                <motion.div variants={buttonVariants} initial="initial" whileHover="hover" whileTap="tap">
-                  <div
-                    className={`relative flex cursor-pointer items-center justify-center gap-2 rounded-full p-3 transition-all duration-500 ${
-                      callCopied ? "email-click" : hoverCall ? "email" : "email"
-                    }`}
-                    onMouseEnter={() => setHoverCall(true)}
-                    onMouseLeave={() => setHoverCall(false)}
-                    onClick={handleCallCopy}
-                  >
-                    {callCopied ? (
-                      <motion.div
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        className="flex items-center gap-2"
-                      >
-                        <p className="font-semibold text-white">Phone no Copied!</p>
-                        <FiCheckCircle className="ml-2 text-lg font-semibold text-white" />
-                      </motion.div>
-                    ) : (
-                      <>
-                        <LuPhoneCall
-                          className={`email-text text-lg font-semibold transition-all duration-300 ${
-                            hoverCall ? "-translate-x-full transform opacity-0" : "opacity-100"
-                          }`}
-                        />
-                        <p
-                          className={`email-text font-semibold transition-all duration-300 ${
-                            hoverCall ? "-translate-x-6" : "translate-x-0"
-                          }`}
-                        >
-                          +234-812-985-9405
-                        </p>
-                        <GoCopy
-                          className={`email-text absolute right-2 text-lg font-semibold transition-all duration-300 ${
-                            hoverCall ? "translate-x-0 transform opacity-100" : "translate-x-full transform opacity-0"
-                          }`}
-                        />
-                      </>
-                    )}
-                  </div>
-                </motion.div>
-              </motion.div>
-
-              {/* Social Media */}
-              <motion.div variants={itemVariants}>
-                <SocialsMedia />
-              </motion.div>
-
-              {/* Footer */}
-              <motion.div className="mt-20" variants={itemVariants}>
-                <p className="clash text-center font-semibold">© 2024 Ibrahim P. Muritala, All Rights Reserved</p>
-              </motion.div>
-            </motion.div>
+            <ContactSection
+              containerVariants={containerVariants}
+              itemVariants={itemVariants}
+              buttonVariants={buttonVariants}
+            />
           </div>
         </div>
       </div>
