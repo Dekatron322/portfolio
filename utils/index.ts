@@ -135,6 +135,104 @@ export const projects = [
     info: "The Ultra app is a pioneering fusion of Web2 and Web3 financial services, providing a unified platform for managing both traditional and digital assets. It seamlessly integrates conventional banking features with decentralized finance (DeFi) capabilities, eliminating the need for multiple, disconnected applications.",
     imageSrc: "/ultra.svg",
     link: "#",
+    company: "Ultra App",
+    headquarters: "Lagos, Nigeria",
+    website: "Not available",
+    revenue: "Not available",
+    founded: "2025",
+    role: "Software Engineer",
+    duration: "April 2025 - Present",
+    tools: "React Native, TypeScript, Expo, Xcode, Git, GitHub, Eas, Swagger",
+    teamMember: [
+      {
+        id: 1,
+        name: "Ibrahim Muritala",
+        position: "Frontend Engineer",
+        avatarSrc: "/avatar.svg",
+      },
+    ],
+    details: "I worked as the lead frontend developer on this project, I was the only frontend developer.",
+    highlights: [
+      {
+        id: 1,
+        imgSrc: "/ultra1.svg",
+        detail: "User interface showing crypto, fiat and all assets page (Dark mode)",
+      },
+      {
+        id: 2,
+        imgSrc: "/ultra2.svg",
+        detail: "User interface showing crypto detail, send and receive token (Light mode)",
+      },
+      {
+        id: 3,
+        imgSrc: "/ultra3.svg",
+        detail: "User interface showing buying and selling of crypto using fiat (Dark mode)",
+      },
+    ],
+    overview: [
+      {
+        id: 1,
+        detail:
+          "Ultra is a pioneering fintech super-app that seamlessly merges traditional Web2 banking services with decentralized Web3 finance. The platform provides users with a unified interface to manage conventional banking activities alongside cryptocurrency transactions, eliminating the need for multiple disconnected applications.",
+      },
+      {
+        id: 2,
+        detail:
+          "As Lead Frontend Developer, I was brought onboard to refine and complete the cross-platform mobile application, while also architecting and building both the comprehensive admin dashboard and marketing website from scratch to create a complete product ecosystem.",
+      },
+    ],
+
+    challenge: [
+      {
+        id: 1,
+        detail:
+          "Users faced significant fragmentation between traditional and digital finance, needing separate apps for banking, bill payments, and cryptocurrency management. This created a poor user experience and acted as a barrier to mainstream adoption of decentralized finance technologies.",
+      },
+      {
+        id: 2,
+        detail:
+          "The existing mobile app foundation required significant refinement to ensure security, performance, and seamless integration between Web2 and Web3 features. Additionally, there was no centralized system for administrators to oversee the hybrid platform's operations or a modern web presence to attract users.",
+      },
+    ],
+
+    solution: [
+      {
+        id: 1,
+        detail:
+          "We delivered a unified mobile application that integrates traditional banking features (account management, transfers, bill payments) with robust Web3 capabilities (non-custodial wallet, token swaps, cross-chain transactions), all within a single, secure interface.",
+      },
+      {
+        id: 2,
+        detail:
+          "I architected and built a comprehensive admin dashboard from scratch, providing granular oversight of both fiat and crypto activities, user management, and financial settlement. Additionally, I developed a responsive marketing website to effectively communicate Ultra's value proposition and drive user acquisition.",
+      },
+    ],
+
+    process: [
+      {
+        id: 1,
+        detail:
+          "Working closely with UI/UX designers, I led the refinement of the React Native mobile app, focusing on performance optimization and hardening the security architecture for financial data and private keys, ensuring a reliable user experience across both financial paradigms.",
+      },
+      {
+        id: 2,
+        detail:
+          "For the dashboard and website, I employed a modern React/TypeScript stack, implementing a component-driven architecture. This ensured design consistency and code reusability across the admin and marketing platforms, while allowing for specialized functionalities in the dashboard's data-intensive interfaces.",
+      },
+    ],
+
+    conclusion: [
+      {
+        id: 1,
+        detail:
+          "Ultra successfully bridges the gap between traditional and decentralized finance, creating a seamless user experience that demystifies Web3 for mainstream audiences. The project showcases the power of a unified interface in driving the adoption of complex financial technologies.",
+      },
+      {
+        id: 2,
+        detail:
+          "This full-spectrum development approach—encompassing consumer mobile application, internal admin tools, and marketing presence—resulted in a cohesive and scalable ecosystem. It establishes a strong foundation for Ultra's growth as a leading player in the evolving fintech landscape.",
+      },
+    ],
   },
 
   {

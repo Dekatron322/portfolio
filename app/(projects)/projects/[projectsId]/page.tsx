@@ -431,7 +431,7 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
                 Overview
               </motion.p>
               <motion.h4 variants={fadeInUp} className="mb-4 text-2xl font-semibold">
-                What is Bluremit
+                What is {project.title}
               </motion.h4>
 
               {/* Info Section */}
@@ -467,7 +467,7 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
                 The Challenge
               </motion.p>
               <motion.h4 variants={fadeInUp} className="mb-4 text-2xl font-semibold">
-                What Birthed Bluremit
+                What Birthed {project.title}
               </motion.h4>
 
               {/* Info Section */}
@@ -503,7 +503,7 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
                 The Solution
               </motion.p>
               <motion.h4 variants={fadeInUp} className="mb-4 text-2xl font-semibold">
-                How Bluremit solves the problem
+                How {project.title} solves the problem
               </motion.h4>
 
               {/* Info Section */}
