@@ -54,6 +54,75 @@ export const projects = [
         imgSrc: "/highlight4.svg",
         detail: "User interface showing QR Code generation for agent to scan and complete transaction",
       },
+      {
+        id: 5,
+        imgSrc: "/highlight5.svg",
+        detail: "Agent interface showing homescreen and trade/offer screen",
+      },
+    ],
+    overview: [
+      {
+        id: 1,
+        detail:
+          "Bluremit is a comprehensive fintech platform designed to digitize and streamline the traditional bureau de change (BDC) market. It functions as a unified mobile application that serves three distinct user roles, creating a complete ecosystem for currency exchange.",
+      },
+      {
+        id: 2,
+        detail:
+          "The platform empowers end-users to find the best rates, allows BDC businesses to manage their operations digitally, and enables agents to process transactions efficiently. My role involved leading the frontend development to bring this multi-faceted vision to life in a single, cohesive application.",
+      },
+    ],
+
+    challenge: [
+      {
+        id: 1,
+        detail:
+          "The currency exchange process was highly fragmented and opaque. End-users lacked a reliable way to compare real-time rates from different vendors, often leading to poor exchange values and a time-consuming experience of visiting multiple physical locations.",
+      },
+      {
+        id: 2,
+        detail:
+          "For BDC businesses, operations were manual and inefficient. There was no digital toolset for managing live rates, tracking transactions, overseeing agent activity, or understanding business performance, resulting in operational bottlenecks and a lack of data-driven insights.",
+      },
+    ],
+
+    solution: [
+      {
+        id: 1,
+        detail:
+          "We architected a single, multi-role mobile application to serve the entire market. For end-users, we built an intuitive interface for comparing live rates, locating nearby BDCs, and securely booking transactions, bringing transparency and convenience to the forefront.",
+      },
+      {
+        id: 2,
+        detail:
+          "For BDCs and their agents, we developed dedicated in-app portals. BDC owners can update rates and monitor their business, while agents have a streamlined tool to process customer bookings and manage in-person exchanges, effectively digitizing their entire workflow.",
+      },
+    ],
+
+    process: [
+      {
+        id: 1,
+        detail:
+          "The development was driven by a component-first architecture using React Native and TypeScript. I worked closely with a UI/UX designer to create a scalable design system, ensuring a consistent look and feel while allowing for customized experiences for each user role within the same codebase.",
+      },
+      {
+        id: 2,
+        detail:
+          "We adopted an agile methodology, building and testing core modules for each user role iteratively. This involved developing the user booking flow, then the BDC rate management dashboard, and finally the agent transaction processing interface, ensuring each part was robust before integration.",
+      },
+    ],
+
+    conclusion: [
+      {
+        id: 1,
+        detail:
+          "Bluremit successfully demonstrates how a well-architected fintech application can consolidate a fragmented market. By serving multiple user personas within one platform, it eliminates inefficiencies and builds a new standard of trust and transparency for users and businesses alike.",
+      },
+      {
+        id: 2,
+        detail:
+          "This project highlights the impact of user-centric frontend engineering in solving complex, real-world problems. The technical decision to build a multi-role application proved crucial in creating a sustainable and scalable ecosystem that benefits all participants in the currency exchange process.",
+      },
     ],
   },
   {
