@@ -256,6 +256,99 @@ export const projects = [
     info: "CHATS is building the future of trustworthy humanitarian aid. It empowers NGOs with a platform that turns transparency into their greatest asset, enabling them to attract more funding by verifiably proving the efficiency and impact of their cash and voucher programs. It is bridging the trust gap between donors and recipients.",
     imageSrc: "/chats2.svg",
     link: "#",
+    company: "Convexity",
+    headquarters: "Abuja, Nigeria",
+    website: "chats.cash",
+    revenue: "Not available",
+    founded: "2020",
+    role: "Software Engineer",
+    duration: "April 2025 - Present",
+    tools: "Next js, TypeScript, Git, GitHub, Graphql, Tailwind CSS",
+    teamMember: [
+      {
+        id: 1,
+        name: "Ibrahim Muritala",
+        position: "Frontend Engineer",
+        avatarSrc: "/avatar.svg",
+      },
+    ],
+    details: "I worked as the Frontend developer on this project, I was the only frontend developer.",
+    highlights: [
+      {
+        id: 1,
+        imgSrc: "/chat1.svg",
+        detail: "Website Interface for chats showing web and mobile view (Dark mode)",
+      },
+      {
+        id: 2,
+        imgSrc: "/chat2.svg",
+        detail: "Website Interface for chats showing web and mobile view (Light mode)",
+      },
+    ],
+    overview: [
+      {
+        id: 1,
+        detail:
+          "CHATS is a purpose-driven, blockchain-powered platform designed to revolutionize humanitarian aid distribution. I led the frontend development for three core products: the donor/NGO web dashboard, the beneficiary mobile application, and the corporate landing page.",
+      },
+      {
+        id: 2,
+        detail:
+          "The platform creates a transparent ecosystem where donors can track contributions in real-time, NGOs can manage verifiable aid campaigns, and beneficiaries receive assistance through a secure mobile interface. All built to establish a new standard of trust in the aid sector.",
+      },
+    ],
+
+    challenge: [
+      {
+        id: 1,
+        detail:
+          "The humanitarian sector lacked integrated tools for verifiable aid tracking. Donors had no transparent way to follow their contributions, while NGOs needed a unified system to manage campaigns, disburse funds, and report impact. All while maintaining beneficiary privacy.",
+      },
+      {
+        id: 2,
+        detail:
+          "Existing solutions were either entirely paper-based or used siloed digital tools that couldn't provide end-to-end transparency from donation to distribution, creating significant accountability gaps and operational inefficiencies.",
+      },
+    ],
+
+    solution: [
+      {
+        id: 1,
+        detail:
+          "I architected and built the comprehensive admin dashboard from scratch, enabling NGOs to launch campaigns, track disbursements, and generate verifiable impact reports while providing donors with full transparency into fund utilization.",
+      },
+      {
+        id: 2,
+        detail:
+          "Developed a secure mobile application for beneficiaries to receive and manage aid, along with a responsive landing page to communicate CHATS' mission and drive platform adoption among donors and humanitarian organizations.",
+      },
+    ],
+
+    process: [
+      {
+        id: 1,
+        detail:
+          "Working closely with UI/UX designers, I implemented a consistent design system across all three products using React and React Native. The dashboard focused on complex data visualization, while the mobile app prioritized accessibility for users with limited connectivity.",
+      },
+      {
+        id: 2,
+        detail:
+          "The development followed an agile methodology, with simultaneous work on the dashboard's campaign management features, the mobile app's aid disbursement flow, and the landing page's conversion-focused design to create a cohesive ecosystem.",
+      },
+    ],
+
+    conclusion: [
+      {
+        id: 1,
+        detail:
+          "The CHATS platform successfully demonstrates how tailored digital products can transform humanitarian work. The dashboard, mobile app, and website together create a transparent ecosystem that builds donor confidence and empowers NGOs with verifiable impact reporting.",
+      },
+      {
+        id: 2,
+        detail:
+          "This project showcases my ability to deliver complex, multi-product solutions that serve diverse user needs—from administrative dashboards to beneficiary-facing mobile applications—all while maintaining a consistent user experience and robust technical foundation.",
+      },
+    ],
   },
   {
     id: 6,
@@ -267,6 +360,99 @@ export const projects = [
     info: "Saffron Wellcare is an all-in-one pharmacy management solution designed to bring clarity and control to pharmacy operations. The platform replaces fragmented processes with a seamlessly integrated system, turning complex data into actionable insights.",
     imageSrc: "/saffron.svg",
     link: "#",
+    company: "Saffron Wellcare",
+    headquarters: "Mumbai, India",
+    website: "saffronwellcare.com",
+    revenue: "Not available",
+    founded: "2025",
+    role: "Software Engineer",
+    duration: "May 2025 - Present",
+    tools: "Next js, TypeScript, Git, GitHub, Tailwind CSS, Postman",
+    teamMember: [
+      {
+        id: 1,
+        name: "Ibrahim Muritala",
+        position: "Frontend Engineer",
+        avatarSrc: "/avatar.svg",
+      },
+    ],
+    details: "I worked as the Frontend developer on this project, I was the only frontend developer.",
+    highlights: [
+      {
+        id: 1,
+        imgSrc: "/chat1.svg",
+        detail: "Website Interface for chats showing web and mobile view (Dark mode)",
+      },
+      {
+        id: 2,
+        imgSrc: "/chat2.svg",
+        detail: "Website Interface for chats showing web and mobile view (Light mode)",
+      },
+    ],
+    overview: [
+      {
+        id: 1,
+        detail:
+          "CHATS is a purpose-driven, blockchain-powered platform designed to revolutionize humanitarian aid distribution. I led the frontend development for three core products: the donor/NGO web dashboard, the beneficiary mobile application, and the corporate landing page.",
+      },
+      {
+        id: 2,
+        detail:
+          "The platform creates a transparent ecosystem where donors can track contributions in real-time, NGOs can manage verifiable aid campaigns, and beneficiaries receive assistance through a secure mobile interface. All built to establish a new standard of trust in the aid sector.",
+      },
+    ],
+
+    challenge: [
+      {
+        id: 1,
+        detail:
+          "The humanitarian sector lacked integrated tools for verifiable aid tracking. Donors had no transparent way to follow their contributions, while NGOs needed a unified system to manage campaigns, disburse funds, and report impact. All while maintaining beneficiary privacy.",
+      },
+      {
+        id: 2,
+        detail:
+          "Existing solutions were either entirely paper-based or used siloed digital tools that couldn't provide end-to-end transparency from donation to distribution, creating significant accountability gaps and operational inefficiencies.",
+      },
+    ],
+
+    solution: [
+      {
+        id: 1,
+        detail:
+          "I architected and built the comprehensive admin dashboard from scratch, enabling NGOs to launch campaigns, track disbursements, and generate verifiable impact reports while providing donors with full transparency into fund utilization.",
+      },
+      {
+        id: 2,
+        detail:
+          "Developed a secure mobile application for beneficiaries to receive and manage aid, along with a responsive landing page to communicate CHATS' mission and drive platform adoption among donors and humanitarian organizations.",
+      },
+    ],
+
+    process: [
+      {
+        id: 1,
+        detail:
+          "Working closely with UI/UX designers, I implemented a consistent design system across all three products using React and React Native. The dashboard focused on complex data visualization, while the mobile app prioritized accessibility for users with limited connectivity.",
+      },
+      {
+        id: 2,
+        detail:
+          "The development followed an agile methodology, with simultaneous work on the dashboard's campaign management features, the mobile app's aid disbursement flow, and the landing page's conversion-focused design to create a cohesive ecosystem.",
+      },
+    ],
+
+    conclusion: [
+      {
+        id: 1,
+        detail:
+          "The CHATS platform successfully demonstrates how tailored digital products can transform humanitarian work. The dashboard, mobile app, and website together create a transparent ecosystem that builds donor confidence and empowers NGOs with verifiable impact reporting.",
+      },
+      {
+        id: 2,
+        detail:
+          "This project showcases my ability to deliver complex, multi-product solutions that serve diverse user needs—from administrative dashboards to beneficiary-facing mobile applications—all while maintaining a consistent user experience and robust technical foundation.",
+      },
+    ],
   },
   {
     id: 5,
