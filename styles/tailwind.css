@@ -41,7 +41,7 @@ body {
 }
 
 [data-theme="dark"] .skills-style {
-  @apply border border-[#292929] bg-[#292929] text-[#ffffff];
+  @apply border border-[#1a1a1a] bg-[#292929] text-[#ffffff];
 }
 
 .backface-hidden {
@@ -95,6 +95,14 @@ body {
 
 .cv {
   @apply bg-[#0a0a0a];
+}
+
+.text-hover {
+  @apply transition-colors duration-300 hover:text-[#000000];
+}
+
+[data-theme="dark"] .text-hover {
+  @apply transition-colors duration-300 hover:text-[#ffffff];
 }
 
 /* p {
@@ -242,6 +250,14 @@ body {
 
 [data-theme="dark"] .containerbg {
   background: #fafafa0f;
+}
+
+.border-style {
+  border: 1px solid #0505050f;
+}
+
+[data-theme="dark"] .border-style {
+  border: 1px solid #fafafa0f;
 }
 
 .dashboard-style {
@@ -566,7 +582,7 @@ body {
   z-index: 1000;
 }
 
-.dropdown-menu.active {
+border .dropdown-menu.active {
   display: block;
 }
 

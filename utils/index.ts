@@ -9,6 +9,52 @@ export const projects = [
     info: "Bluremit is a fintech and currency exchange platform that lets users compare real-time rates and securely book transactions at a network of verified Bureau de Change (BDC) agents. It provides a standardized exchange interface and will give users the easy possibility to find the best prices and complete their forex trades with transparency and convenience...",
     imageSrc: "/bluremit.svg",
     link: "#",
+    company: "Blumen Tech",
+    headquarters: "Abuja, Nigeria",
+    website: "Not available",
+    revenue: "Not available",
+    founded: "2020",
+    role: "Software Engineer",
+    duration: "2020 - Present",
+    tools: "React Native, TypeScript, Expo, Xcode, Git, GitHub, Eas, Swagger",
+    teamMember: [
+      {
+        id: 1,
+        name: "Ibrahim Muritala",
+        position: "Frontend Engineer",
+        avatarSrc: "/avatar.svg",
+      },
+      {
+        id: 2,
+        name: "Manuel Emeka",
+        position: "Backend Engineer",
+        avatarSrc: "/manuel.jpeg",
+      },
+    ],
+    details:
+      "I worked as the lead product designer on this project, collaborating with Emmanuel, a senior backend developer whom I onboarded to join me in bringing this idea to life.",
+    highlights: [
+      {
+        id: 1,
+        imgSrc: "/highlight1.svg",
+        detail: "User interface with wallet account deposits to Bluremit User or External bank account ",
+      },
+      {
+        id: 2,
+        imgSrc: "/highlight2.svg",
+        detail: "User interface with exchange screen showing flow for user to create buy/sell orders",
+      },
+      {
+        id: 3,
+        imgSrc: "/highlight3.svg",
+        detail: "User interface with wallet top-up via bluremit agent",
+      },
+      {
+        id: 4,
+        imgSrc: "/highlight4.svg",
+        detail: "User interface showing QR Code generation for agent to scan and complete transaction",
+      },
+    ],
   },
   {
     id: 2,
