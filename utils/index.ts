@@ -380,25 +380,60 @@ export const projects = [
     highlights: [
       {
         id: 1,
-        imgSrc: "/chat1.svg",
-        detail: "Website Interface for chats showing web and mobile view (Dark mode)",
+        imgSrc: "/saffron1.svg",
+        detail: "Dashboard for saffron wellcare showing analytics of pharmacy activities",
       },
       {
         id: 2,
-        imgSrc: "/chat2.svg",
-        detail: "Website Interface for chats showing web and mobile view (Light mode)",
+        imgSrc: "/saffron2.svg",
+        detail: "Purchase overview page for saffron wellcare",
+      },
+      {
+        id: 3,
+        imgSrc: "/saffron3.svg",
+        detail: "Raise Purchase order screen for saffron wellcare",
+      },
+      {
+        id: 4,
+        imgSrc: "/saffron4.svg",
+        detail: "Reorder suggestion screen for saffron wellcare showing low stock items",
+      },
+      {
+        id: 5,
+        imgSrc: "/saffron5.svg",
+        detail: "Order return screen for saffron wellcare to create return note",
+      },
+      {
+        id: 6,
+        imgSrc: "/saffron6.svg",
+        detail: "Saffron dashboard showing customer page",
+      },
+      {
+        id: 7,
+        imgSrc: "/saffron7.svg",
+        detail: "Subscription page for saffron wellcare",
+      },
+      {
+        id: 8,
+        imgSrc: "/saffron8.svg",
+        detail: "Organization page showing all organizations under saffron wellcare",
       },
     ],
     overview: [
       {
         id: 1,
         detail:
-          "CHATS is a purpose-driven, blockchain-powered platform designed to revolutionize humanitarian aid distribution. I led the frontend development for three core products: the donor/NGO web dashboard, the beneficiary mobile application, and the corporate landing page.",
+          "Saffron Wellcare is a comprehensive, cloud-based Pharmacy Management System designed to be the central operating platform for modern pharmacies. It consolidates all critical operations—from inventory and sales to patient management and regulatory compliance—into a single, intuitive interface.",
       },
       {
         id: 2,
         detail:
-          "The platform creates a transparent ecosystem where donors can track contributions in real-time, NGOs can manage verifiable aid campaigns, and beneficiaries receive assistance through a secure mobile interface. All built to establish a new standard of trust in the aid sector.",
+          "As the Lead Frontend Developer, I was responsible for architecting and building the entire web application from the ground up. This involved creating a complex dashboard with multiple interconnected modules to serve pharmacists, technicians, and pharmacy owners.",
+      },
+      {
+        id: 3,
+        detail:
+          "The system was engineered to replace error-prone, manual processes with automated, data-driven workflows, ultimately enabling pharmacy staff to shift their focus from administrative tasks to enhanced patient care and business growth.",
       },
     ],
 
@@ -406,12 +441,17 @@ export const projects = [
       {
         id: 1,
         detail:
-          "The humanitarian sector lacked integrated tools for verifiable aid tracking. Donors had no transparent way to follow their contributions, while NGOs needed a unified system to manage campaigns, disburse funds, and report impact. All while maintaining beneficiary privacy.",
+          "Pharmacies typically rely on a disjointed set of tools—often including physical logbooks, spreadsheets, and standalone software—leading to severe operational inefficiencies, difficulty in tracking inventory, and a high risk of human error in prescription and billing management.",
       },
       {
         id: 2,
         detail:
-          "Existing solutions were either entirely paper-based or used siloed digital tools that couldn't provide end-to-end transparency from donation to distribution, creating significant accountability gaps and operational inefficiencies.",
+          "There was a significant lack of real-time visibility into key business metrics. Pharmacy owners struggled to make informed decisions about inventory purchasing, identify sales trends, or maintain accurate financial records without time-consuming manual compilation.",
+      },
+      {
+        id: 3,
+        detail:
+          "Managing compliance and adhering to complex pharmaceutical regulations (e.g., batch tracking, expiry date monitoring) was a manual and risky process, creating potential liabilities for the business and safety concerns for patients.",
       },
     ],
 
@@ -419,12 +459,17 @@ export const projects = [
       {
         id: 1,
         detail:
-          "I architected and built the comprehensive admin dashboard from scratch, enabling NGOs to launch campaigns, track disbursements, and generate verifiable impact reports while providing donors with full transparency into fund utilization.",
+          "I designed and developed a centralized dashboard that serves as the pharmacy's command center. Key modules include a real-time Inventory Management system with stock alerts, a Sales & Purchase hub for tracking all transactions and orders, and a comprehensive Customer & Supplier directory.",
       },
       {
         id: 2,
         detail:
-          "Developed a secure mobile application for beneficiaries to receive and manage aid, along with a responsive landing page to communicate CHATS' mission and drive platform adoption among donors and humanitarian organizations.",
+          "The application features advanced capabilities like automated Reorder Suggestions based on sales data, a Return Order system for supplier management, and a robust Reporting & Analytics engine that provides insights into finances, inventory turnover, and sales performance.",
+      },
+      {
+        id: 3,
+        detail:
+          "A core focus was on user-specific functionality. The system provides tailored views and tools for different roles, from a pharmacy owner needing a high-level financial overview to a technician primarily focused on processing prescriptions and managing stock levels.",
       },
     ],
 
@@ -432,12 +477,17 @@ export const projects = [
       {
         id: 1,
         detail:
-          "Working closely with UI/UX designers, I implemented a consistent design system across all three products using React and React Native. The dashboard focused on complex data visualization, while the mobile app prioritized accessibility for users with limited connectivity.",
+          "The development followed a modular architecture using React and TypeScript. I built a library of reusable components for data tables, forms, and charts to ensure consistency and speed up the development of complex modules like the inventory and sales dashboards.",
       },
       {
         id: 2,
         detail:
-          "The development followed an agile methodology, with simultaneous work on the dashboard's campaign management features, the mobile app's aid disbursement flow, and the landing page's conversion-focused design to create a cohesive ecosystem.",
+          "I worked closely with UI/UX designers to conduct workflow analysis with practicing pharmacists. This ensured that critical tasks, such as processing a sale or raising a purchase order, required minimal clicks and integrated seamlessly with the pharmacy's daily routine.",
+      },
+      {
+        id: 3,
+        detail:
+          "We adopted an iterative Agile approach, releasing core modules like Inventory and Sales first. This allowed for early user feedback, which was then incorporated into subsequent modules like Purchasing and Advanced Reporting, ensuring the final product truly met user needs.",
       },
     ],
 
@@ -445,12 +495,17 @@ export const projects = [
       {
         id: 1,
         detail:
-          "The CHATS platform successfully demonstrates how tailored digital products can transform humanitarian work. The dashboard, mobile app, and website together create a transparent ecosystem that builds donor confidence and empowers NGOs with verifiable impact reporting.",
+          "Saffron Wellcare successfully transforms a pharmacy from a reactive operation into a proactive, data-driven business. By centralizing all operations, it eliminates informational silos, reduces errors, and provides a clear path for growth and improved patient service.",
       },
       {
         id: 2,
         detail:
-          "This project showcases my ability to deliver complex, multi-product solutions that serve diverse user needs—from administrative dashboards to beneficiary-facing mobile applications—all while maintaining a consistent user experience and robust technical foundation.",
+          "This project stands as a testament to the power of a well-architected frontend to solve deep, complex operational problems. The system not only streamlines workflows but also becomes an indispensable strategic tool for pharmacy owners, directly contributing to the efficiency and safety of healthcare delivery.",
+      },
+      {
+        id: 3,
+        detail:
+          "The technical foundation laid down—emphasizing scalability, a clear component hierarchy, and an intuitive user experience—ensures the platform can continue to evolve with new features and regulations, securing its long-term value for users.",
       },
     ],
   },
