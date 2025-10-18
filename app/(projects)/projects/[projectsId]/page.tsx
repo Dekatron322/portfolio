@@ -226,7 +226,7 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
       className="mb-40 flex size-full items-start justify-center"
     >
       {/* Main Content Container */}
-      <div className="flex min-h-screen max-w-[800px] flex-col max-sm:p-4">
+      <div className="flex min-h-screen max-w-[800px] flex-col max-md:p-4">
         <ProjectsNav />
 
         <motion.div variants={staggerContainer} initial="hidden" animate="show" className="mt-20 flex grow">

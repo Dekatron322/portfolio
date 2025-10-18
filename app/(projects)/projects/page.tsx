@@ -53,7 +53,7 @@ export default function Dashboard() {
   }
 
   return (
-    <section className="flex size-full items-center justify-center  md:mb-24">
+    <section className="flex size-full items-center justify-center max-md:mb-40  md:mb-24">
       <div className="flex min-h-screen flex-col max-sm:w-full max-sm:p-4 md:max-w-[800px]">
         <DashboardNav />
         <div className="mt-16 flex grow">

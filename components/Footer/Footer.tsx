@@ -1,4 +1,3 @@
-"use client"
 import Image from "next/image"
 import React, { useState } from "react"
 import { FiCheckCircle, FiUser } from "react-icons/fi"
@@ -16,7 +15,7 @@ const Footer = () => {
   const pathname = usePathname()
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("muritalaibrahim097@gmail.com")
+    navigator.clipboard.writeText("cygnux696@gmail.com")
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -37,10 +36,10 @@ const Footer = () => {
       className="fixed bottom-0 left-0 right-0 z-50 flex justify-center max-sm:px-3"
     >
       <div className="footer_bg flex h-16 w-full items-center justify-between whitespace-nowrap rounded-full px-2 font-semibold md:max-w-[800px]">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image className="rounded-full" src="/avatar.svg" width={50} height={50} alt="avatar" />
           <h5 className="footer_text text-2xl max-sm:hidden">IBMuri</h5>
-        </div>
+        </Link>
         <div className="flex items-center gap-6">
           {/* About Link with Hover Animation */}
           <Link href="/about" className="relative flex h-6 items-center gap-2 overflow-hidden">
@@ -141,8 +140,8 @@ const Footer = () => {
           >
             {copied ? (
               <>
-                <p className="text-white">Email Copied!</p>
-                <FiCheckCircle className="ml-2 text-lg font-semibold text-white" />
+                <p className="text-white max-sm:hidden">Email Copied!</p>
+                <FiCheckCircle className="md:ml-2 text-lg font-semibold text-white" />
               </>
             ) : (
               <>

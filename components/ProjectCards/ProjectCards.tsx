@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { GoArrowRight } from "react-icons/go"
 import { useRouter } from "next/navigation"
 import { projects } from "utils"
@@ -8,7 +8,24 @@ import { motion } from "framer-motion"
 export default function ProjectCard() {
   const [hoverIndex, setHoverIndex] = useState(-1)
   const [justHoverIndex, setJustHoverIndex] = useState(-1)
+  const [isMobile, setIsMobile] = useState(false)
   const router = useRouter()
+
+  // Check if we're on mobile view
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768) // 768px is typical breakpoint for mobile
+    }
+
+    // Check on mount
+    checkMobile()
+
+    // Add event listener for resize
+    window.addEventListener('resize', checkMobile)
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,7 +57,7 @@ export default function ProjectCard() {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
-          <div className={`transition-transform duration-500 ${hoverIndex === index ? "-translate-y-full" : ""}`}>
+          <div className={`transition-transform duration-500 ${(hoverIndex === index && !isMobile) ? "-translate-y-full" : ""}`}>
             <Image
               className=" w-full overflow-hidden rounded-t-xl  "
               src={project.imageSrc}
@@ -51,7 +68,7 @@ export default function ProjectCard() {
           </div>
           <div
             className={`relative mt-4 transition-transform duration-500 ${
-              hoverIndex === index ? "-translate-y-60" : ""
+              (hoverIndex === index && !isMobile) ? "-translate-y-60" : ""
             }`}
           >
             <div className="p-4">
@@ -64,8 +81,8 @@ export default function ProjectCard() {
               <h5 className="clash text-xl font-bold">{project.description}</h5>
             </div>
             <div
-              className={`p-4 transition-opacity duration-500 ${
-                hoverIndex === index ? "opacity-100" : "hidden opacity-0"
+              className={`p-4 transition-opacity duration-500 max-md:hidden  ${
+                (hoverIndex === index || isMobile) ? "opacity-100" : "hidden opacity-0"
               }`}
             >
               <p className=" small-text">{project.info}</p>
@@ -73,7 +90,7 @@ export default function ProjectCard() {
           </div>
           <div
             className={`absolute bottom-4 left-4 right-4 transition-opacity duration-500 ${
-              hoverIndex === index ? "opacity-100" : "opacity-0"
+              (hoverIndex === index || isMobile) ? "opacity-100" : "opacity-0"
             }`}
           >
             <motion.button

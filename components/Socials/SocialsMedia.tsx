@@ -60,7 +60,7 @@ const SocialsMedia = () => {
     >
       <motion.div className="mt-20 flex justify-center gap-10 max-sm:grid max-sm:grid-cols-2" variants={itemVariants}>
         <Link
-          href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+          href="https://www.linkedin.com/in/muritala-ibrahim-050921201/"
           target="_blank"
           className=" relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3 py-3 transition-colors duration-300"
           onMouseEnter={() => setLinkedInHover(true)}
@@ -85,7 +85,7 @@ const SocialsMedia = () => {
         </Link>
 
         <Link
-          href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+          href="https://github.com/Dekatron322"
           target="_blank"
           className=" relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3 py-3 transition-colors duration-300"
           onMouseEnter={() => setGitHover(true)}
@@ -109,7 +109,7 @@ const SocialsMedia = () => {
           </div>
         </Link>
         <Link
-          href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+          href="https://x.com/Ebrahem0x"
           target="_blank"
           className=" relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3 py-3 transition-colors duration-300"
           onMouseEnter={() => setTwitterHover(true)}
@@ -133,7 +133,7 @@ const SocialsMedia = () => {
           </div>
         </Link>
         <Link
-          href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+          href="https://discord.gg/HjJ99DfS"
           target="_blank"
           className=" relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3 py-3 transition-colors duration-300"
           onMouseEnter={() => setDiscordHover(true)}
@@ -162,7 +162,7 @@ const SocialsMedia = () => {
         variants={itemVariants}
       >
         <Link
-          href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+          href="https://www.instagram.com/ebraheemthe69th?igsh=MXZybzFwZ2lzdmE1ZA=="
           target="_blank"
           className=" relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3 py-3 transition-colors duration-300"
           onMouseEnter={() => setInstagramHover(true)}
@@ -187,7 +187,7 @@ const SocialsMedia = () => {
         </Link>
 
         <Link
-          href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+          href="#"
           target="_blank"
           className=" relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3 py-3 transition-colors duration-300"
           onMouseEnter={() => setGitLabHover(true)}
@@ -211,7 +211,7 @@ const SocialsMedia = () => {
           </div>
         </Link>
         <Link
-          href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+          href="#"
           target="_blank"
           className=" relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3 py-3 transition-colors duration-300"
           onMouseEnter={() => setTelegramHover(true)}
@@ -235,7 +235,7 @@ const SocialsMedia = () => {
           </div>
         </Link>
         <Link
-          href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+          href="#"
           target="_blank"
           className=" relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-3 py-3 transition-colors duration-300"
           onMouseEnter={() => setTiktokHover(true)}

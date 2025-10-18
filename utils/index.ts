@@ -15,7 +15,7 @@ export const projects = [
     revenue: "Not available",
     founded: "2020",
     role: "Software Engineer",
-    duration: "2020 - Present",
+    duration: "June. 2024 - Present",
     tools: "React Native, TypeScript, Expo, Xcode, Git, GitHub, Eas, Swagger",
     teamMember: [
       {
@@ -24,12 +24,12 @@ export const projects = [
         position: "Frontend Engineer",
         avatarSrc: "/avatar.svg",
       },
-      {
-        id: 2,
-        name: "Manuel Emeka",
-        position: "Backend Engineer",
-        avatarSrc: "/manuel.jpeg",
-      },
+      // {
+      //   id: 2,
+      //   name: "Manuel Emeka",
+      //   position: "Backend Engineer",
+      //   avatarSrc: "/manuel.jpeg",
+      // },
     ],
     details:
       "I worked as the lead product designer on this project, collaborating with Emmanuel, a senior backend developer whom I onboarded to join me in bringing this idea to life.",
@@ -141,7 +141,7 @@ export const projects = [
     revenue: "Not available",
     founded: "2025",
     role: "Software Engineer",
-    duration: "April 2025 - Present",
+    duration: "April 2024 - Present",
     tools: "React Native, TypeScript, Expo, Xcode, Git, GitHub, Eas, Swagger",
     teamMember: [
       {
@@ -366,7 +366,7 @@ export const projects = [
     revenue: "Not available",
     founded: "2025",
     role: "Software Engineer",
-    duration: "May 2025 - Present",
+    duration: "March. 2025s - Present",
     tools: "Next js, TypeScript, Git, GitHub, Tailwind CSS, Postman",
     teamMember: [
       {
@@ -509,16 +509,16 @@ export const projects = [
       },
     ],
   },
-  {
-    id: 5,
-    year: "2025",
-    category: "Web 3",
-    industry: "Finance",
-    title: "Chainkeeping",
-    description: "A simplified user centered preoder system, aimed at simplifying preoder of smart door handles",
-    info: "The Stacks ecosystem is growing at a bullish pace. With about 10 protocols & communities, 19 partners & integrations, 12 tools and utilities, and about 27 dApps are currently built on the ecosystem. Stacks ecosystem is becoming a significant player in the decentralized market and web3 as a whole.",
-    imageSrc: "/susmo.svg",
-    link: "#",
-  },
+  // {
+  //   id: 5,
+  //   year: "2025",
+  //   category: "Web 3",
+  //   industry: "Finance",
+  //   title: "Chainkeeping",
+  //   description: "A simplified user centered preoder system, aimed at simplifying preoder of smart door handles",
+  //   info: "The Stacks ecosystem is growing at a bullish pace. With about 10 protocols & communities, 19 partners & integrations, 12 tools and utilities, and about 27 dApps are currently built on the ecosystem. Stacks ecosystem is becoming a significant player in the decentralized market and web3 as a whole.",
+  //   imageSrc: "/susmo.svg",
+  //   link: "#",
+  // },
   // Add more project objects as needed
 ]

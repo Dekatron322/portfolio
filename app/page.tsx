@@ -60,11 +60,7 @@ export default function Dashboard() {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const handleCallCopy = () => {
-    navigator.clipboard.writeText("08129859405")
-    setCallCopied(true)
-    setTimeout(() => setCallCopied(false), 2000)
-  }
+
 
   const isLetterTyped = (positionIndex: number, letter: string) => {
     return typedLetters.has(`${positionIndex}-${letter}`)
@@ -152,7 +148,7 @@ export default function Dashboard() {
   }
 
   return (
-    <section className="flex size-full items-center justify-center md:mb-24">
+    <section className="flex size-full items-center justify-center md:mb-24 max-md:mb-40">
       <div className="flex min-h-screen flex-col max-sm:w-full max-sm:p-4 md:max-w-[800px]">
         <DashboardNav />
         <div className="mt-16 flex grow">

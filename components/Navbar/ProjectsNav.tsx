@@ -53,7 +53,7 @@ const ProjectsNav = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeOut", duration: 1 }}
-      className="z-150 fixed left-0 right-0 top-0 z-20 flex  justify-center pt-7 backdrop-blur "
+      className="z-150 fixed left-0 right-0 top-0 z-20 flex  justify-center pt-7 backdrop-blur max-md:px-4"
     >
       <div className="flex w-full max-w-[800px] justify-between backdrop-blur">
         <motion.div
