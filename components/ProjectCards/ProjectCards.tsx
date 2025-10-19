@@ -1,6 +1,5 @@
 import Image from "next/image"
-import { useState, useEffect } from "react"
-import { GoArrowRight } from "react-icons/go"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { projects } from "utils"
 import { motion } from "framer-motion"
