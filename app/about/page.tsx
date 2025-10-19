@@ -166,7 +166,7 @@ export default function Dashboard() {
               {/* CV Button */}
               <motion.div variants={buttonVariants} initial="initial" whileHover="hover" whileTap="tap">
                 <Link
-                  href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1OZF9TFHlbtj1JVw7l88rpPqowXE4BG4h/view?usp=drive_link?usp=sharing"
                   target="_blank"
                   className="cv cv-text relative flex h-10 w-36 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-3   transition-colors duration-300"
                   onMouseEnter={() => setCvHover(true)}

@@ -169,7 +169,7 @@ export default function Dashboard() {
 
             <motion.div className="-z-10 mt-5 flex w-full gap-4" variants={fadeInUp} initial="hidden" animate="visible">
               <Link
-                href="https://drive.google.com/file/d/1_KNKhl8xPXh8wwSbAmQY6ORSSDsV6wnF/view?usp=sharing"
+                href="https://drive.google.com/file/d/1OZF9TFHlbtj1JVw7l88rpPqowXE4BG4h/view?usp=drive_link?usp=sharing"
                 target="_blank"
                 className="cv cv-text relative flex min-w-32 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full p-2 transition-colors duration-300 max-sm:w-full max-sm:text-xs"
                 onMouseEnter={() => setCvHover(true)}
