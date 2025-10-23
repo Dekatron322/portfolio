@@ -11,8 +11,9 @@ export const projects = [
     link: "#",
     company: "Blumen Tech",
     headquarters: "Abuja, Nigeria",
-    website: "Not available",
-    revenue: "Not available",
+    website: "Unavailable",
+    url: "",
+    revenue: "Unavailable",
     founded: "2020",
     role: "Software Engineer",
     duration: "June. 2024 - Present",
@@ -137,7 +138,8 @@ export const projects = [
     link: "#",
     company: "Ultra App",
     headquarters: "Lagos, Nigeria",
-    website: "Not available",
+    website: "https://ultraapp.co",
+    url: "https://ultraapp.co",
     revenue: "Not available",
     founded: "2025",
     role: "Software Engineer",
@@ -245,6 +247,137 @@ export const projects = [
     info: "The Ultra Admin Dashboard is a comprehensive, web-based command center designed to oversee and manage the entire ecosystem of the Ultra fintech super-app. It provides administrators with granular control over the platform's fusion of Web2 and Web3 activities, from user management to financial settlement.",
     imageSrc: "/ultra-web.png",
     link: "#",
+    company: "Ultra App",
+    headquarters: "Lagos, Nigeria",
+    website: "https://ultraapp.co",
+    url: "https://ultraapp.co",
+    revenue: "Not available",
+    founded: "2025",
+    role: "Software Engineer",
+    duration: "April 2024 - Present",
+    tools: "Next js, TypeScript, Git, GitHub, Swagger, Tailwind CSS, Cypress, Jest",
+    teamMember: [
+      {
+        id: 1,
+        name: "Ibrahim Muritala",
+        position: "Frontend Engineer",
+        avatarSrc: "/avatar.svg",
+      },
+    ],
+    details: "I worked as the lead frontend developer on this project, I was the only frontend developer.",
+
+    highlights: [
+      {
+        id: 1,
+        imgSrc: "/Dark.svg",
+        detail: "New Ultra website landing page (dark mode)",
+      },
+      {
+        id: 2,
+        imgSrc: "/customer-dashbord.svg",
+        detail: "Ultra dashboard showing customer details pages",
+      },
+      {
+        id: 3,
+        imgSrc: "/swap.svg",
+        detail: "Ultra dashboard showing swap page enabling token swap",
+      },
+      {
+        id: 4,
+        imgSrc: "/withdraw.svg",
+        detail: "Ultra dashboard showing fiat withdrawal",
+      },
+    ],
+
+    overview: [
+      {
+        id: 1,
+        detail:
+          "The Ultra Dashboard is a comprehensive, internal administrative platform designed as the central command center for the entire Ultra fintech ecosystem. It empowers the operations, finance, and support teams with complete oversight and control over all activities occurring within the Ultra super-app.",
+      },
+      {
+        id: 2,
+        detail:
+          "As the Lead Frontend Developer, I architected and built this complex dashboard from scratch. The goal was to create a powerful, intuitive, and secure interface that could seamlessly manage the unique hybrid of traditional banking (Web2) and decentralized finance (Web3) operations.",
+      },
+      {
+        id: 3,
+        detail:
+          "The platform consolidates data and controls from both financial worlds into a single pane of glass, eliminating operational silos and providing a unified tool for platform management, risk mitigation, and customer support.",
+      },
+    ],
+
+    challenge: [
+      {
+        id: 1,
+        detail:
+          "Operating a hybrid fintech platform without a centralized admin system was highly inefficient. Teams had to juggle multiple disconnected tools to handle user issues, view transactions, and manage financial settlements, leading to slow response times and potential for error.",
+      },
+      {
+        id: 2,
+        detail:
+          "There was no secure or scalable way to perform critical administrative functions. This included urgent user account actions (like suspending fraudulent accounts or granting bonuses), adjusting global platform settings like transaction fees, or managing the movement of assets within the company's master wallets.",
+      },
+      {
+        id: 3,
+        detail:
+          "The lack of a unified transaction view made financial reconciliation and customer support incredibly difficult. Admins could not easily see a user's complete financial picture, which included both their fiat and crypto transactions, in one place.",
+      },
+    ],
+
+    solution: [
+      {
+        id: 1,
+        detail:
+          "We delivered a robust admin dashboard featuring a high-level overview with key metrics on user activity, fiat withdrawals, crypto volume, and platform health. This gives leadership and operations an immediate pulse on the entire platform.",
+      },
+      {
+        id: 2,
+        detail:
+          "A central part of the solution was a powerful User Management module. This allows support teams to view individual user profiles, see their complete transaction history, and take direct actions such as sending notifications, applying account suspensions or bans, and crediting bonus funds to wallets.",
+      },
+      {
+        id: 3,
+        detail:
+          "For financial control, we built a sophisticated Treasury Management system. Authorized admins can securely initiate transfers and token swaps from the company's master accounts, settle profits, and dynamically manage transaction fees applied across the platform.",
+      },
+      {
+        id: 4,
+        detail:
+          "Security and scalability were addressed with a granular Admin & Roles system. This allows for the creation of multiple admin accounts with specific permissions, ensuring team members only have access to the functions necessary for their role, protecting sensitive data and financial controls.",
+      },
+    ],
+
+    process: [
+      {
+        id: 1,
+        detail:
+          "The frontend was built with a React/TypeScript stack, using a state management library to handle the complex, interconnected data. We implemented a modular, component-based architecture, which allowed us to build reusable components for data tables, charts, and action modals that were used throughout the dashboard.",
+      },
+      {
+        id: 2,
+        detail:
+          "I worked closely with backend engineers to design a secure API that could aggregate data from both traditional banking processors and multiple blockchain networks. We built specialized endpoints for the unified transaction page that normalizes and presents both fiat and crypto transactions in a single, sortable list.",
+      },
+      {
+        id: 3,
+        detail:
+          "For the user interface, we prioritized clarity and efficiency. We designed detailed user profile pages that summarize all account activity and implemented clear, confirmation-heavy workflows for sensitive actions like fund transfers and account bans to prevent errors and maintain a strong audit trail.",
+      },
+    ],
+
+    conclusion: [
+      {
+        id: 1,
+        detail:
+          "The Ultra Dashboard has become an indispensable tool for running the Ultra platform. It has dramatically increased operational efficiency, reduced response times for customer support issues, and provided the financial team with the transparency needed for accurate reconciliation and reporting.",
+      },
+      {
+        id: 2,
+        detail:
+          "By building a secure, scalable, and feature-rich administrative ecosystem, we successfully created the foundational infrastructure that allows Ultra to operate safely and grow confidently. The dashboard is a critical asset that enables the company to maintain trust and stability as it scales.",
+      },
+    ],
   },
   {
     id: 4,
@@ -259,6 +392,7 @@ export const projects = [
     company: "Convexity",
     headquarters: "Abuja, Nigeria",
     website: "chats.cash",
+    url: "https://chats.cash",
     revenue: "Not available",
     founded: "2020",
     role: "Software Engineer",

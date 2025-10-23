@@ -217,6 +217,11 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
   const process = project.process ?? []
   const conclusion = project.conclusion ?? []
 
+  const formatUrl = (url: string) => {
+    if (!url) return ""
+    return /^https?:\/\//i.test(url) ? url : `${url}`
+  }
+
   return (
     <motion.section
       initial="initial"
@@ -308,7 +313,27 @@ const ProjectDetail = ({ params }: { params: { projectsId: string } }) => {
                             className="flex "
                           >
                             <p className="small-text mb-4 w-1/2">{item.label}</p>
-                            <p className="mb-4 flex w-1/2 items-end">{item.value}</p>
+                            {item.label === "Website" ? (
+                              (() => {
+                                const raw = typeof item.value === "string" ? item.value.trim() : ""
+                                const hasUrl = !!raw
+                                if (hasUrl) {
+                                  return (
+                                    <a
+                                      href={project.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="mb-4 flex w-1/2 items-end break-all text-blue-600 hover:underline"
+                                    >
+                                      {raw}
+                                    </a>
+                                  )
+                                }
+                                return <p className="mb-4 flex w-1/2 items-end">#</p>
+                              })()
+                            ) : (
+                              <p className="mb-4 flex w-1/2 items-end">{item.value}</p>
+                            )}
                           </motion.div>
                         ))}
                       </motion.div>
